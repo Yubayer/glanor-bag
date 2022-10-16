@@ -1,158 +1,165 @@
 {% liquid
-  assign grid1 = section.settings.grid | times: 1
-  assign grid2 = 100 | minus: grid1
-  if grid1 == 100
-    assign grid2 = 100
-  endif
-%}
+     assign grid1 = section.settings.grid | times: 1
+     assign grid2 = 100 | minus: grid1
+     if grid1 == 100
+       assign grid2 = 100
+     endif
+   %}
 
 <!-- Demo styles -->
-  <style>
-    .maze-image-card{
-      margin-top: {{ section.settings.section_mt | append: 'px' }};
-      margin-bottom: {{ section.settings.section_mb | append: 'px' }};
-    }
-    
-    .maze-image-card-container {
-      width: 100%;
-      height: 100%;
-    }
+<style>
+  .maze-image-card {
+    margin-top: {{ section.settings.section_mt | append: 'px' }};
+    margin-bottom: {{ section.settings.section_mb | append: 'px' }};
+  }
 
-    .image-card-wrapper {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 10px;
-    }
+  .maze-image-card-container {
+    width: 100%;
+    height: 100%;
+  }
 
-    .image-card-content{
-      width: 100%;
-      height: {{section.settings.section_height | append: 'px'}};
-      position: relative;
-    }
+  .image-card-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
 
-    .image-card-content-{{ section.id }}:first-child{
-      width: {{ grid1 | append: '%' }};
-    }
-    
-    .image-card-content-{{ section.id }}:last-child{
-      width: {{ grid2 | append: '%' }};
-    }
+  .image-card-content {
+    width: 100%;
+    height: {{ section.settings.section_height | append:'px' }};
+    position: relative;
+  }
 
-    .image-card-content img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  .image-card-content-{{ section.id }}:first-child {
+    width: {{ grid1 | append: '%' }};
+  }
 
-    .image_card-text-wrapper{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-    }
+  .image-card-content-{{ section.id }}:last-child {
+    width: {{ grid2 | append: '%' }};
+  }
 
-    .image_card-text-content{
-      width: max-content;
-      height: max-content;
-      max-width: 80vw;
-    }
+  .image-card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    .image_card-text-content > h2 {
-      color: white;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-    }
+  .image_card-text-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
 
-    .image_card-text-content > p {
-      color: white;
-      text-align: center;
-      font-size: 18px;
-    }
+  .image_card-text-content {
+    width: max-content;
+    height: max-content;
+    max-width: 80vw;
+  }
 
-    .image_card-btns {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 19px;
-    }
+  .image_card-text-content > h2 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
 
-    .image_card-btns > a {
-      cursor: pointer;
-      text-decoration: none;
-      box-sizing: border-box;
-      padding: 7px 20px;
-      text-transform: uppercase;
-      color: white;
-    }
-  </style>
+  .image_card-text-content > p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .image_card-btns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+  }
+
+  .image_card-btns > a {
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    color: white;
+  }
+</style>
 
 
-  <div class="{% unless section.settings.full_width %}page-width{% endunless %} maze-image-card">
-    <div class="maze-image-card-container">
-      <div class="image-card-wrapper">
-        {% for block in section.blocks %}
-          <div class="image-card-content image-card-content-{{ section.id }}">
-            {% if block.settings.image_desktop != blank %}
-              <img src="{{ block.settings.image_desktop | img_url: 'master' }}">
-            {% else %}
-              {{ 'lifestyle-1' | placeholder_svg_tag }}
-            {% endif %}
-              {% if block.settings.show_text_content %}
-                <div class="image_card-text-wrapper">
-                  <div class="image_card-text-content image-card-text_content-{{ forloop.index }}-{{ section.id }}">
-                      {% if block.settings.title != blank %}
-                        <h2 class="slider-title-{{ forloop.index }}-{{ section.id }}">{{ block.settings.title }}</h2>
-                      {% endif %}
-                      {% if block.settings.text != blank %}
-                        <p>{{ block.settings.text }}</p>
-                      {% endif %}
-                      {% if block.settings.btn_text_1 != blank or block.settings.btn_text_2 != blank%}
-                        <div class="image_card-btns">
-                         <style>
-                           .slider-title-{{ forloop.index }}-{{ section.id }} {
-                              text-transform: {{ block.settings.title_transform }};
-                              font-size: {{ block.settings.title_font_size | append: 'px' }};
-                            }
-                            a.slider-btn-{{ forloop.index }}-{{ section.id }} { background-color: {{ block.settings.btn_color_1 }};}
-                            a.slider-btn-{{ forloop.index }}-{{ section.id }}:hover {background-color: {{ block.settings.btn_color_1_hover }};}
-                            .image-card-text_content-{{ forloop.index }}-{{ section.id }} {
-                              box-sizing: border-box;
-                              padding-right: {{ block.settings.text_content_pr | append: 'px'}};
+<div class="{% unless section.settings.full_width %}page-width{% endunless %} maze-image-card">
+  <div class="maze-image-card-container">
+    <div class="image-card-wrapper">
+      {% for block in section.blocks %}
+        <div class="image-card-content image-card-content-{{ section.id }}">
+          {% if block.settings.image_desktop != blank %}
+            <img src="{{ block.settings.image_desktop | img_url: 'master' }}" alt="banner-img">
+          {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag }}
+          {% endif %}
+          {% if block.settings.show_text_content %}
+            <div class="image_card-text-wrapper">
+              <div class="image_card-text-content image-card-text_content-{{ forloop.index }}-{{ section.id }}">
+                {% if block.settings.title != blank %}
+                  <h2 class="slider-title-{{ forloop.index }}-{{ section.id }}">{{ block.settings.title }}
+                  </h2>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <p>{{ block.settings.text }}
+                  </p>
+                {% endif %}
+                {% if block.settings.btn_text_1 != blank or block.settings.btn_text_2 != blank%}
+                  <div class="image_card-btns">
+                    <style>
+                      .slider-title-{{ forloop.index }}-{{ section.id }}{
+                        text-transform: {{ block.settings.title_transform }};
+                        font-size: {{ block.settings.title_font_size | append: 'px' }};
+                      }
+                      a.slider-btn-{{ forloop.index }}-{{ section.id }}{
+                        background-color: {{ block.settings.btn_color_1 }};
+                      }
+                      a.slider-btn-{{ forloop.index }}-{{ section.id }}:hover {
+                        background-color: {{ block.settings.btn_color_1_hover }};
+                      }
+                      .image-card-text_content-{{ forloop.index }}-{{ section.id }}{
+                        box-sizing: border-box;
+                        padding-right: {{ block.settings.text_content_pr | append: 'px'}};
                               padding-left: {{ block.settings.text_content_pl | append: 'px'}};
                               padding-top: {{ block.settings.text_content_pt | append: 'px'}};
                               padding-bottom: {{ block.settings.text_content_pb | append: 'px'}};
                               background: {{ block.settings.background_textcontent }};
-                              position: relative;
-                            }
-                           .image-card-text_content-{{ forloop.index }}-{{ section.id }}::after{
-                              position: absolute;
-                              content: "";
-                              height: calc(100% - 20px);
-                              border: 1px solid white;
-                              width: calc(100% - 20px);
-                              top: 10px;
-                              left: 10px;
-                             }
-                          </style>
-                           {% if block.settings.btn_text_1 != blank %}
-                             <a class="slider-1-btn slider-btn-{{ forloop.index }}-{{ section.id }}" href="{{ block.settings.btn_url_1 }}">{{ block.settings.btn_text_1 }}</a>
-                           {% endif %}
-                        </div>
-                      {% endif %}
+                        position: relative;
+                      }
+                      .image-card-text_content-{{ forloop.index }}-{{ section.id }}::after {
+                        position: absolute;
+                        content: "";
+                        height: calc(100% - 20px);
+                        border: 1px solid white;
+                        width: calc(100% - 20px);
+                        top: 10px;
+                        left: 10px;
+                      }
+                    </style>
+                    {% if block.settings.btn_text_1 != blank %}
+                      <a class="slider-1-btn slider-btn-{{ forloop.index }}-{{ section.id }}" href="{{ block.settings.btn_url_1 }}">{{ block.settings.btn_text_1 }}
+                      </a>
+                    {% endif %}
                   </div>
-                </div>
-              {% endif %}
-          </div>
-        {% endfor %}
-      </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
     </div>
   </div>
+</div>
 
 {% schema %}
   {
@@ -193,8 +200,7 @@
         "unit": "px",
         "label": "Section Height",
         "default": 600
-      },
-       {
+      }, {
         "type": "select",
         "id": "grid",
         "label": "Grid Style",
@@ -202,26 +208,23 @@
           {
             "value": "40",
             "label": "Style 1"
-          },
-          {
+          }, {
             "value": "50",
             "label": "Style 2"
-          },
-          {
+          }, {
             "value": "60",
             "label": "Style 3"
-          },
-          {
+          }, {
             "value": "100",
             "label": "Style 4"
           }
         ],
         "default": "60"
-      }   
+      }
     ],
     "blocks": [
       {
-        "type" : "card",
+        "type": "card",
         "name": "Card block",
         "limit": 2,
         "settings": [
@@ -237,16 +240,13 @@
               {
                 "value": "24",
                 "label": "Small"
-              },
-              {
+              }, {
                 "value": "30",
                 "label": "Medium"
-              },
-              {
+              }, {
                 "value": "40",
                 "label": "Large"
-              },
-              {
+              }, {
                 "value": "46",
                 "label": "Extra Large"
               }
@@ -264,13 +264,11 @@
             "id": "background_textcontent",
             "label": "Background",
             "default": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)"
-          },
-          {
+          }, {
             "type": "text",
             "id": "title",
             "label": "Heading"
-          },
-          {
+          }, {
             "type": "select",
             "id": "title_transform",
             "label": "Title Text Transform",
@@ -278,72 +276,58 @@
               {
                 "value": "lowercase",
                 "label": "Lowercase"
-              },
-              {
+              }, {
                 "value": "uppercase",
                 "label": "Uppercase"
-              },
-              {
+              }, {
                 "value": "capitalize",
                 "label": "Capitalize"
               }
             ],
             "default": "capitalize"
-          },
-          {
+          }, {
             "type": "textarea",
             "id": "text",
             "label": "Text"
-          },
-          {
+          }, {
             "type": "header",
             "content": "First Button Content"
-          },
-          {
+          }, {
             "type": "text",
             "id": "btn_text_1",
             "label": "Button Text 1"
-          },
-          {
+          }, {
             "type": "url",
             "id": "btn_url_1",
             "label": "Button Url 1"
-          },
-          {
+          }, {
             "type": "color",
             "id": "btn_color_1",
             "label": "Background color",
             "default": "#000000"
-          },
-          {
+          }, {
             "type": "color",
             "id": "btn_color_1_hover",
             "label": "Background hover color",
             "default": "#000000"
-          },
-          {
+          }, {
             "type": "header",
             "content": "Desktop"
-          },
-          {
+          }, {
             "type": "image_picker",
             "id": "image_desktop",
             "label": "Select Desktop Image"
-          },
-          {
+          }, {
             "type": "header",
             "content": "Mobile"
-          },
-          {
+          }, {
             "type": "image_picker",
             "id": "image_mobile",
             "label": "Select Mobile Image"
-          },
-          {
+          }, {
             "type": "header",
             "content": "Text Content Padding"
-          },
-          {
+          }, {
             "type": "range",
             "id": "text_content_pt",
             "min": 0,
@@ -352,8 +336,7 @@
             "unit": "px",
             "label": "Padding Top",
             "default": 10
-          },
-          {
+          }, {
             "type": "range",
             "id": "text_content_pb",
             "min": 0,
@@ -362,8 +345,7 @@
             "unit": "px",
             "label": "Padding Bottom",
             "default": 10
-          },
-          {
+          }, {
             "type": "range",
             "id": "text_content_pl",
             "min": 0,
@@ -372,8 +354,7 @@
             "unit": "px",
             "label": "Padding Left",
             "default": 10
-          },
-          {
+          }, {
             "type": "range",
             "id": "text_content_pr",
             "min": 0,
@@ -392,4 +373,4 @@
       }
     ]
   }
-{% endschema %}
+{% endschema %}}}}
