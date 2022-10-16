@@ -316,7 +316,7 @@
           "isLimitMenu": false,
           "showArrow": true,
           "menu_align": "menu-center-2",
-          "bg-color": "radial-gradient(rgba(137, 143, 239, 1), rgba(120, 196, 245, 1) 100%)"
+          "bg-color": ""
         }
       }
     },
