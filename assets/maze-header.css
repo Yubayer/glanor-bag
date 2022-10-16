@@ -375,6 +375,8 @@
 .mh2-c-menu-ul{
   list-style-type: none;
   display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .mh2-c-menu-li{
