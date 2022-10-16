@@ -372,9 +372,14 @@
 
 }
 
-.mh2-c-menu-ul{}
+.mh2-c-menu-ul{
+  list-style-type: none;
+  display: flex;
+}
 
-.mh2-c-menu-li{}
+.mh2-c-menu-li{
+
+}
 
 .mh2-search-icon {
   display: none;
