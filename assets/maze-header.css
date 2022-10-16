@@ -330,6 +330,8 @@
 .menu-content-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .mh2-ct-search,
@@ -364,23 +366,33 @@
   width: 100%;
 }
 
-.mh2-dp-search > input {
+.mh2-dp-search>input {
   width: 100%;
+  font-family: Crimson Text, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #000;
+  padding: 12px;
+  border-color: #000;
 }
 
-.mh2-c-menu{
-
+.mh2-c-menu {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
 
-.mh2-c-menu-ul{
+.mh2-c-menu-ul {
   list-style-type: none;
   display: flex;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
-.mh2-c-menu-li{
-
+.mh2-c-menu-li {
+  font-size: 16px;
 }
 
 .mh2-search-icon {
