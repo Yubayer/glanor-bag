@@ -5,42 +5,50 @@
   }
 {% endstyle %}
 <maze-header>
-<div class="page-width">
-<div class="maze-header">
-      <div class="menu-container">
-        <div class="menu-wrapper">
-            <div class="menu-content-top">
-              <div class="mh2-ct-logo">
-                <h1>Logo Center</h1>
-              </div>
-              <div class="mh2-ct-search">
-                <div class="mh2-dp-search">
-                  <span class="mh2-search-icon">
-                    <svg focusable="false" width="18" height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
-                      <path 
-                        d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        style="fill: none; stroke: #000; stroke-width: 1.5px;"
-                        stroke-width="2"></path>
-                    </svg>  
-                  </span>
-                  <input class="mh2-open-search-drawer mh2-search-input" type="text" placeholder="Search Here">
-                  {% render 'maze-search-dropdown' %}
+  <div class="page-width">
+    <div class="maze-header">
+          <div class="menu-container">
+            <div class="menu-wrapper">
+                <div class="menu-content-top">
+                  <div class="mh2-c-menu">
+                    <ul class="mh2-c-menu-ul">
+                      <li class="mh2-c-menu-li">Contact</li>
+                      <li class="mh2-c-menu-li">Gift-card</li>
+                      <li class="mh2-c-menu-li">Shipping & Return</li>
+                    </ul>
+                  </div>
+                  <div class="mh2-ct-logo">
+                    <h1>Logo Center</h1>
+                  </div>
+                  <div class="mh2-ct-search">
+                    <div class="mh2-dp-search">
+                      <span class="mh2-search-icon">
+                        <svg focusable="false" width="18" height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
+                          <path 
+                            d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            style="fill: none; stroke: #000; stroke-width: 1.5px;"
+                            stroke-width="2"></path>
+                        </svg>  
+                      </span>
+                      <input class="mh2-open-search-drawer mh2-search-input" type="text" placeholder="Search Here">
+                      {% render 'maze-search-dropdown' %}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="menu-content {{ section.settings.menu_align }}">
-                <div class="menu-list-x">
-                  {% render 'maze-header-menu', section %}
+                <div class="menu-content {{ section.settings.menu_align }}">
+                    <div class="menu-list-x">
+                      {% render 'maze-header-menu', section %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+  </div>
 </maze-header>
-{{ 'maze-header.js' |  asset_url | script_tag }}
+
+{{ 'maze-header.js' | asset_url | script_tag }}
 
 {% schema %}
   {
