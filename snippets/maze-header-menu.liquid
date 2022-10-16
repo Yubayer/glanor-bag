@@ -1,0 +1,65 @@
+{% liquid
+  assign menuLists = section.settings.main-menu.links 
+  assign listSize = menuLists.size
+  assign limitSize = section.settings.limit | plus: 0
+  assign isMoreMenu = false
+  if listSize > limitSize
+    assign isMoreMenu = true
+  else
+    assign isMoreMenu = false
+  endif
+%}
+
+<ul class="parent-items-x">
+  {% if isMoreMenu %}
+    {% if section.settings.isLimitMenu %}
+      {% for link in section.settings.main-menu.links limit: limitSize %}
+          <li class="parent-item-x">
+            {% render 'maze-header-menu-list', 
+              link: link, 
+              section: section 
+            %}
+            
+            {% render 'maze-header-child',
+              link: link,
+              section: section
+            %}
+          </li>
+        {% endfor %}
+        <li class="header-x-more parent-item-x">
+          {% render 'maze-header-more', 
+            section: section, 
+            limitSize: limitSize
+          %}
+        </li>
+      {% else %}
+        {% for link in section.settings.main-menu.links %}
+            <li class="parent-item-x">
+              {% render 'maze-header-menu-list', 
+                link: link, 
+                section: section 
+              %}
+
+              {% render 'maze-header-child',
+                link: link,
+                section: section
+              %}
+            </li>
+          {% endfor %}
+      {% endif %}
+  {% else %}
+     {% for link in section.settings.main-menu.links %}
+        <li class="parent-item-x">
+          {% render 'maze-header-menu-list', 
+            link: link, 
+            section: section 
+          %}
+          
+          {% render 'maze-header-child',
+            link: link,
+            section: section
+          %}
+        </li>
+      {% endfor %}
+  {% endif %}
+</ul>

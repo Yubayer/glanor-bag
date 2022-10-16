@@ -1,0 +1,20 @@
+<maze-search-dropdown>
+  <div class="dp-search-container">
+    <div class="msd-mobile-input">
+      <input class="mh2-open-search-drawer mh2-search-input" type="text" placeholder="Search Here">
+    </div>
+    <div class="ms-filter ms-none msd-filter">
+       <ul class="msf-ul">
+        <li class="msf-product msf-active" data-type="product">Products</li>
+        <li class="msf-product" data-type="popular">Popular Products</li>
+        <li class="msf-collection" data-type="collection">Collections</li>
+        <li class="msf-page" data-type="page">Pages</li>
+      </ul>
+      <script type="application/popular-products">{{ settings.popular.products | json }}</script>
+    </div>
+    <div class="msd-result"></div>
+    <div class="msd-footer">
+      <a>View All Results</a>
+    </div>
+  </div>
+</maze-search-dropdown>

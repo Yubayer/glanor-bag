@@ -1,0 +1,24 @@
+
+{% if link.links.size > 0 or section.blocks.size > 0 %}
+  <div class="child-wrapper">
+      <ul class="child-items-x">
+        {% for child_link in link.links %}
+          <li class="child-item-x"><a href="{{ child_link.url }}">{{ child_link.title }}</a>
+          {% render 'maze-header-grand-child',
+            child_link: child_link,
+            section: section,
+            blocks: blocks
+          %}
+          </li>
+        {% endfor %}
+        <li>
+          {% render 'maze-header-child-image',
+            section: section,
+            blocks: blocks,
+            link: link,
+            child_link: child_link
+          %}
+        </li>
+      </ul>
+  </div>
+{% endif %}

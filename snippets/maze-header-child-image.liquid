@@ -1,0 +1,22 @@
+{% for block in section.blocks %}
+  {% assign settingTitle = block.settings.title | escape | downcase %}
+  {% assign listTitle = link.title | escape | downcase %}
+  {% if settingTitle == listTitle %}
+    <ul class="image-list-x">
+      {% for i in (1..8) %}
+        {% capture imageIndex %}image{{ forloop.index }}{% endcapture %}
+        {% capture titleIndex %}title-{{ forloop.index }}{% endcapture %}
+        {% capture urlIndex %}url-{{ forloop.index }}{% endcapture %}
+        
+          {% if block.settings[imageIndex] != blank %}
+             <li>
+              <a href="{{ block.settings[urlIndex] }}">
+                <img src="{{ block.settings[imageIndex] | img_url: '200x' }}" alt="image">
+                <p>{{ block.settings[titleIndex] }}</p>
+              </a>
+            </li>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,377 @@
+<!-- Demo styles -->
+  <style>
+    .maze_homeslider{
+      margin-top: {{ section.settings.slider_mt | append: 'px' }};
+      margin-bottom: {{ section.settings.slider_mb | append: 'px' }};
+    }
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .maze-home-slide{
+      width: 100%;
+      height: {{section.settings.slider_height | append: 'px'}};
+      position: relative;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slider-text-wrapper{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .slider-text-content{
+      width: max-content;
+      height: max-content;
+      max-width: 80vw;
+      background: {{ section.settings.background }};
+      box-sizing: border-box;
+      padding-right: {{ section.settings.text_content_pr | append: 'px'}};
+      padding-left: {{ section.settings.text_content_pl | append: 'px'}};
+      padding-top: {{ section.settings.text_content_pt | append: 'px'}};
+      padding-bottom: {{ section.settings.text_content_pb | append: 'px'}};
+    }
+
+    .slider-text-content > h2 {
+      color: white;
+      font-size: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .slider-text-content > p {
+      color: white;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .maze-slider-btns {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 19px;
+    }
+
+    .maze-slider-btns > a {
+      cursor: pointer;
+      text-decoration: none;
+      box-sizing: border-box;
+      padding: 7px 20px;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .mazeSliderSwiper .swiper-pagination-bullet {
+      width: 45px;
+      height: 5px;
+      border-radius: 0px;
+    }
+
+    .mazeSliderSwiper .swiper-pagination-bullet-active {
+      background: black;
+    }
+
+    .mazeSliderSwiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0px;
+    }
+
+    .mazeSliderSwiper > div:empty {
+      display: block;
+    }
+  </style>
+
+
+  <!-- Swiper -->
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %} maze_homeslider">
+    <div class="swiper mazeSliderSwiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide maze-home-slide">
+            {% if block.settings.image_desktop != blank %}
+              <img src="{{ block.settings.image_desktop | img_url: 'master' }}">
+            {% else %}
+              {{ 'lifestyle-1' | placeholder_svg_tag }}
+            {% endif %}
+              {% if block.settings.show_text_content %}
+                <div class="slider-text-wrapper">
+                  <div class="slider-text-content">
+                      {% if block.settings.title != blank %}
+                        <h2 class="slider-title-{{ forloop.index }}">{{ block.settings.title }}</h2>
+                      {% endif %}
+                      {% if block.settings.text != blank %}
+                        <p>{{ block.settings.text }}</p>
+                      {% endif %}
+                      {% if block.settings.btn_text_1 != blank or block.settings.btn_text_2 != blank%}
+                        <div class="maze-slider-btns">
+                         <style>
+                           .slider-title-{{ forloop.index }} {text-transform: {{ block.settings.title_transform }};}
+                            a.slider-1-btn { background-color: {{ block.settings.btn_color_1 }};}
+                            a.slider-1-btn:hover {background-color: {{ block.settings.btn_color_1_hover }};}
+                            a.slider-2-btn {background-color: {{ block.settings.btn_color_2 }};}
+                            a.slider-2-btn:hover {background-color: {{ block.settings.btn_color_2_hover }};}
+                          </style>
+                           {% if block.settings.btn_text_1 != blank %}
+                             <a class="slider-1-btn" href="{{ block.settings.btn_url_1 }}">{{ block.settings.btn_text_1 }}</a>
+                           {% endif %}
+                           {% if block.settings.btn_text_2 != blank %}
+                             <a class="slider-2-btn" href="{{ block.settings.btn_url_2 }}">{{ block.settings.btn_text_2 }}</a>
+                           {% endif %}
+                        </div>
+                      {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mazeSliderSwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+      });
+    </script>
+
+{% schema %}
+  {
+    "name": "Maze Home Slider",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full Width Slider?",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "slider_mt",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Slider Space Top",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "slider_mb",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Slider Space Bottom",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "slider_height",
+        "min": 300,
+        "max": 1200,
+        "step": 20,
+        "unit": "px",
+        "label": "Slider Height",
+        "default": 600
+      },
+      {
+        "type": "header",
+        "content": "Text Content Style"
+      },
+      {
+        "type": "color_background",
+        "id": "background",
+        "label": "Background",
+        "default": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)"
+      },
+      {
+        "type": "range",
+        "id": "text_content_pt",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "text_content_pb",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "text_content_pl",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Left",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "text_content_pr",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding Right",
+        "default": 10
+      }
+    ],
+    "blocks": [
+      {
+        "type" : "slider",
+        "name": "slider",
+        "limit": 10,
+        "settings": [
+          {
+            "type": "header",
+            "content": "Text Content"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_text_content",
+            "label": "Show Text Content?",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "select",
+            "id": "title_transform",
+            "label": "Title Text Transform",
+            "options": [
+              {
+                "value": "lowercase",
+                "label": "Lowercase"
+              },
+              {
+                "value": "uppercase",
+                "label": "Uppercase"
+              },
+              {
+                "value": "capitalize",
+                "label": "Capitalize"
+              }
+            ],
+            "default": "capitalize"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "header",
+            "content": "First Button Content"
+          },
+          {
+            "type": "text",
+            "id": "btn_text_1",
+            "label": "Button Text 1"
+          },
+          {
+            "type": "url",
+            "id": "btn_url_1",
+            "label": "Button Url 1"
+          },
+          {
+            "type": "color",
+            "id": "btn_color_1",
+            "label": "Background color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "btn_color_1_hover",
+            "label": "Background hover color",
+            "default": "#000000"
+          },
+          {
+            "type": "header",
+            "content": "Second Button Content"
+          },
+          {
+            "type": "text",
+            "id": "btn_text_2",
+            "label": "Button Text 2"
+          },
+          {
+            "type": "url",
+            "id": "btn_url_2",
+            "label": "Button Url 2"
+          },
+          {
+            "type": "color",
+            "id": "btn_color_2",
+            "label": "Background",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "btn_color_2_hover",
+            "label": "Background hover color",
+            "default": "#000000"
+          },
+          {
+            "type": "header",
+            "content": "Desktop Slider"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_desktop",
+            "label": "Select Desktop Image"
+          },
+          {
+            "type": "header",
+            "content": "Mobile Slider"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Select Mobile Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Maze Home Slider"
+      }
+    ]
+  }
+{% endschema %}

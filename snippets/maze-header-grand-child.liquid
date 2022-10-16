@@ -1,0 +1,7 @@
+{% if child_link.links %}
+  <ul class="grand-child-items-x">
+    {% for grand_child in child_link.links %}
+      <li><a>{{ grand_child.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}

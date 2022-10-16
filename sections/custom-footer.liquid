@@ -1,0 +1,361 @@
+<style>
+ 
+  .custom-footer footer{
+    padding: 20px 0;
+  }
+  .custom-footer-wrapper{
+    margin: 20px auto;
+    text-align: left;
+    padding-top: 20px;
+  }
+  .custom-footer-top-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .custom-footer-menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .custom-footer-left{
+    flex-basis: 55%;
+    margin-right: 50px;
+  }
+  .custom-footer-right{
+    flex-basis: 45%;
+    margin-left: 50px;
+  }
+  .custom-footer-menu-wrapper h6, .form-address-wrapper h6,.footer-connect-wrapper h6{
+    margin: 0;
+    padding: 0 0 5px;
+    color: #040404;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .custom-footer-menu-wrapper a{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #595959;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    transition: color .1s linear;
+  }
+  .custom-footer-menu-wrapper a:hover{
+    color: #cb501b !important;
+  }
+  .custom-footer-right-wrapper{
+    display: flex;
+  }
+  .footer-connect{
+    flex-basis: 50%;
+  }
+  .footer-address{
+    flex-basis: 50%;
+    text-align: center;
+  }
+  ul.social_icons{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.social_icons li{
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .field-custom input[type=email]{
+/*     display: block; */
+/*     width: 100%; */
+    height: 44px;
+    min-height: 44px;
+    padding: 0 10px;
+    margin: 0 0 15px;
+/*     line-height: 22px; */
+    border: 1px solid #e7e6e5;
+    outline: none;
+    background: #fff;
+    color: #5f6a7d;
+    font: 13px HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    text-rendering: optimizeLegibility;
+  }
+  .field-custom input[type=email]:focus{
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  }
+  .newsletter-form__button-custom{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    padding: 13px 20px;
+    text-align: center;
+    line-height: 1.2;
+    font-family: Crimson Text,serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-break: break-word;
+    cursor: pointer;
+    transition: all .2s linear;
+    border-color: var(--button-color-border, #cb501b);
+    background: var(--button-color-background, #cb501b);
+    color: var(--button-color-text, #ffffff);
+  }
+   .newsletter-form__button-custom{
+    display: inline-block;
+    width: 120px;
+    padding-left: 0;
+    padding-right: 0;
+    float: none;
+  }
+  .newsletter-form__button-custom:hover:not([disabled]){
+    background: #e57342;
+    border-color: #e57342;
+    color: #ffffff;
+  }
+  .footer-social-icons a svg{
+    width: 20px;
+    height: 100%;
+  }
+
+  .custom-footer-bottom-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+  }
+  .credits a, .credits a:visited{
+    color: #595959;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color .1s linear;
+  }
+  .credits a:hover{
+    color: #cb501b;
+  }
+  .payment-methods svg{
+    padding-right: 4px;
+    height: 30px;
+    width: 48px;
+  }
+  @media screen and (max-width: 768px){
+    .custom-footer-top-wrapper{
+      flex-direction: column;
+    }
+    .custom-footer-menu{
+      flex-direction: column;
+    }
+    .custom-footer-right-wrapper{
+      flex-direction: column;
+    }
+    .custom-footer-bottom-wrapper{
+      flex-direction: column;
+    }
+    .custom-footer-left {
+      flex-basis: 100%;
+      margin-right: 0px;
+      width: 100%;
+    }
+    .custom-footer-right {
+      flex-basis: 100%;
+      margin-left: 0px;
+      width: 100%;
+    }
+    .custom-footer-menu-wrapper a{
+      margin-left: 20px;
+    }
+    .custom-footer-right-wrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+    .footer-connect {
+      flex-basis: 100%;
+      width: 100%;
+      align-self: center;
+      text-align: center;
+    }
+    .footer-address {
+      flex-basis: 100%;
+      width: 100%;
+      text-align: left;
+      margin-top: 40px;
+    }
+    .field-custom input[type=email]{
+      width: 100%;
+    }
+    .newsletter-form__button-custom{
+      width: 100%;
+    }
+    .payment-methods{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>
+<section class="custom-footer footer">
+  <div class="custom-footer-wrapper page-width">
+    <div class="custom-footer-top">
+      <div class="custom-footer-top-wrapper">
+        <div class="custom-footer-left">
+          <div class="custom-footer-left-wrapper">
+            <div class="custom-footer-menu">
+              {% for block in section.blocks %}
+                {% if block.type == "footer-menu" %}
+                  <div class="custom-footer-menu-wrapper">
+                    <h6>{{ block.settings.footer-menu.title }}</h6>
+                    {% for link in block.settings.footer-menu.links %}
+                    	<a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
+                  </div>
+                 {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="custom-footer-right">
+          <div class="custom-footer-right-wrapper">
+            <div class="footer-connect">
+              <div class="footer-connect-wrapper">
+                <h6>CONNECT</h6>
+                <ul class="social_icons">
+                  <li class="footer-social-icons">
+                    <a href="mailto:contact@teskeys.com" title="Email Teskeys" class="icon-email">{% render 'social-icons', name: 'email' %}</a>
+                  </li>
+                  <li class="footer-social-icons">
+                    <a href="https://www.facebook.com/Teskeys/" title="Teskeys on Facebook" rel="me" target="_blank" class="icon-facebook">{% render 'social-icons', name: 'facebook' %}</a>
+                  </li>
+                  <li class="footer-social-icons">
+                    <a href="https://www.instagram.com/teskeys_weatherfordtx/" title="Teskeys on Instagram" rel="me" target="_blank" class="icon-instagram">{% render 'social-icons', name: 'instagram' %}</a>
+                  </li>
+                  <li class="footer-social-icons">
+                    <a href="https://pinterest.com/teskeys" title="Teskeys on Pinterest" rel="me" target="_blank" class="icon-pinterest">{% render 'social-icons', name: 'pinterest' %}</a>
+                  </li>
+                  <li class="footer-social-icons">
+                    <a href="https://www.tiktok.com/@teskeys_saddles" title="Teskeys on TikTok" rel="me" target="_blank" class="icon-tiktok">{% render 'social-icons', name: 'tiktok' %}</a>
+                  </li>
+                </ul>
+                <p>Stay connected to the latest news&nbsp;&amp; deals:</p>
+                <div class="news-letter">
+                      {% form 'customer', class: 'newsletter-form' %}
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <div class="newsletter-form__field-wrapper-custom">
+                          <div class="field-custom">
+                            <input
+                              id="NewsletterForm--{{ section.id }}"
+                              type="email"
+                              name="contact[email]"
+                              class="field__input-custom"
+                              value="{{ form.email }}"
+                              aria-required="true"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              autocomplete="email"
+                              {% if form.errors %}
+                                autofocus
+                                aria-invalid="true"
+                                aria-describedby="Newsletter-error--{{ section.id }}"
+                              {% elsif form.posted_successfully? %}
+                                aria-describedby="Newsletter-success--{{ section.id }}"
+                              {% endif %}
+                              placeholder="{{ 'newsletter.label' | t }}"
+                              required
+                            >
+                            {% comment %}
+                            <label class="field__label-custom" for="NewsletterForm--{{ section.id }}">
+                              {{ 'newsletter.label' | t }}
+                            </label>
+                          {% endcomment %}
+                          <br>
+                            <button type="submit" class="newsletter-form__button-custom field__button-custom" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                              {% comment %}{% render 'icon-arrow' %}{% endcomment %}
+                              SIGN UP
+                            </button>
+                          </div>
+                          {%- if form.errors -%}
+                            <small class="newsletter-form__message-custom form__message-custom" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                          {%- endif -%}
+                        </div>
+                        {%- if form.posted_successfully? -%}
+                          <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                        {%- endif -%}
+                      {% endform %}
+                </div>
+              </div>
+            </div>
+            <div class="footer-address">
+              <div class="form-address-wrapper">
+                <h6>Directions & Hours</h6>
+                <div class="form-address-inner">
+                   <p>Come by and see us <br>Monday - Saturday from&nbsp;8a - 6p.</p><p></p><p><strong>3001 West I-20<br>Weatherford, TX 76087<br></strong><a href="tel:8889552955" title="tel:8889552955"><strong>888.955.2955</strong></a></p><p></p><p>Cafe Hours: <br>Tuesday - Saturday 7:30a - 3p.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-footer-bottom">
+      <div class="custom-footer-bottom-wrapper">
+        <div class="custom-footer-bottom-left">
+          <p class="credits">
+          © 2022 <a href="/" title="">Teskeys</a>. <a href="https://outofthesandbox.com/" target="_blank" title="Turbo Shopify Theme by Out of the Sandbox">Designed by Out of the Sandbox</a>.</p>
+        </div>
+        <div class="custom-footer-bottom-left">
+          <div class="payment-methods">
+            {% render 'payment', name: 'amex' %}
+            {% render 'payment', name: 'apple' %}
+            {% render 'payment', name: 'club' %}
+            {% render 'payment', name: 'discover' %}
+            {% render 'payment', name: 'g-pay' %}
+            {% render 'payment', name: 'master-card' %}
+            {% render 'payment', name: 'paypal' %}
+            {% render 'payment', name: 'shop-pay' %}
+            {% render 'payment', name: 'venmo' %}
+            {% render 'payment', name: 'visa' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+
+  ],
+  "blocks": [
+     {
+       "name": "Footer Menu",
+       "type": "footer-menu",
+       "settings": [
+          {
+            "type": "link_list",
+            "id": "footer-menu",
+            "label": "Menu"
+          }
+
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

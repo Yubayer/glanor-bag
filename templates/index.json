@@ -1,0 +1,326 @@
+{
+  "sections": {
+    "e29b67d0-cfe7-4611-8ab4-e08ce2f0420f": {
+      "type": "maze-home-slider",
+      "blocks": {
+        "84087ada-60d8-48c7-a6f8-01af045c5c2a": {
+          "type": "slider",
+          "settings": {
+            "show_text_content": true,
+            "title": "New & used saddless",
+            "title_transform": "uppercase",
+            "text": "",
+            "btn_text_1": "Show new",
+            "btn_url_1": "",
+            "btn_color_1": "#df2e2e",
+            "btn_color_1_hover": "#d76868",
+            "btn_text_2": "Shop Used",
+            "btn_url_2": "",
+            "btn_color_2": "#1e1717",
+            "btn_color_2_hover": "#ab3d3d",
+            "image_desktop": "shopify:\/\/shop_images\/Banner-1.png"
+          }
+        },
+        "6ae1290b-c914-4f3b-8644-962b4ac3ba66": {
+          "type": "slider",
+          "settings": {
+            "show_text_content": false,
+            "title": "",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "",
+            "btn_url_1": "",
+            "btn_color_1": "#000000",
+            "btn_color_1_hover": "#000000",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_color_2": "#000000",
+            "btn_color_2_hover": "#000000"
+          }
+        },
+        "50949f5e-1f84-4b3e-9420-c68eb39bf40f": {
+          "type": "slider",
+          "settings": {
+            "show_text_content": false,
+            "title": "",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "",
+            "btn_url_1": "",
+            "btn_color_1": "#000000",
+            "btn_color_1_hover": "#000000",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_color_2": "#000000",
+            "btn_color_2_hover": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "84087ada-60d8-48c7-a6f8-01af045c5c2a",
+        "6ae1290b-c914-4f3b-8644-962b4ac3ba66",
+        "50949f5e-1f84-4b3e-9420-c68eb39bf40f"
+      ],
+      "settings": {
+        "full_width": false,
+        "slider_mt": 19,
+        "slider_mb": 29,
+        "slider_height": 400,
+        "background": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)",
+        "text_content_pt": 10,
+        "text_content_pb": 28,
+        "text_content_pl": 32,
+        "text_content_pr": 32
+      }
+    },
+    "70180f9b-e004-4147-a124-fe0946970b93": {
+      "type": "maze-image-link-block",
+      "blocks": {
+        "81697a27-b1e8-484c-a3cb-b69e43504d24": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
+            "btn_text": "Track 1",
+            "btn_url": ""
+          }
+        },
+        "e78623de-a668-42cc-a6ee-b4f967519350": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
+            "btn_text": "Track 2",
+            "btn_url": ""
+          }
+        },
+        "5a6e771d-f47e-457c-9921-4447131d8590": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
+            "btn_text": "Track 3",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "81697a27-b1e8-484c-a3cb-b69e43504d24",
+        "e78623de-a668-42cc-a6ee-b4f967519350",
+        "5a6e771d-f47e-457c-9921-4447131d8590"
+      ],
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>WELCOME TO TESKEY'S SADDLE SHOP<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Teskey’s Saddle Shop is one of the most trusted names in the horse industry. With over 1000 saddles, hundreds of bits and spurs, boots, clothing, Case knives, ranch and farm equipment and equine medical supplies, we are your one stop shop for all of your equestrian and western apparel needs.<\/p><p><strong>From the ranch to the rodeo, Teskey's has you covered.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "5edd084f-a486-4324-8a52-03bcdf96cfaf": {
+      "type": "maze-image-card-block",
+      "blocks": {
+        "b5bfd6c1-fccd-4638-9039-5f1c158b48d4": {
+          "type": "card",
+          "settings": {
+            "title_font_size": "24",
+            "show_text_content": true,
+            "background_textcontent": "linear-gradient(180deg, rgba(80, 94, 10, 0.46) 100%, rgba(0, 0, 0, 1) 100%)",
+            "title": "CUSTOMS AND AWARDS",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "Show Now",
+            "btn_url_1": "",
+            "btn_color_1": "#000000",
+            "btn_color_1_hover": "#df2e2e",
+            "image_desktop": "shopify:\/\/shop_images\/bgx1.jpg",
+            "text_content_pt": 25,
+            "text_content_pb": 25,
+            "text_content_pl": 60,
+            "text_content_pr": 60
+          }
+        },
+        "ada801ff-70bf-4585-ba48-09fe32c20399": {
+          "type": "card",
+          "settings": {
+            "title_font_size": "24",
+            "show_text_content": true,
+            "background_textcontent": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)",
+            "title": "CUSTOM SADDLE OPTIONS",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "Details",
+            "btn_url_1": "",
+            "btn_color_1": "#df2e2e",
+            "btn_color_1_hover": "#610909",
+            "image_desktop": "shopify:\/\/shop_images\/bgx2.jpg",
+            "text_content_pt": 25,
+            "text_content_pb": 25,
+            "text_content_pl": 15,
+            "text_content_pr": 15
+          }
+        }
+      },
+      "block_order": [
+        "b5bfd6c1-fccd-4638-9039-5f1c158b48d4",
+        "ada801ff-70bf-4585-ba48-09fe32c20399"
+      ],
+      "settings": {
+        "full_width": false,
+        "section_mt": 10,
+        "section_mb": 10,
+        "section_height": 300,
+        "grid": "60"
+      }
+    },
+    "94539076-83ce-495c-a3df-1e0146334d9b": {
+      "type": "maze-image-card-block",
+      "blocks": {
+        "226cea6c-8fbd-4d73-b20d-071c274a79ba": {
+          "type": "card",
+          "settings": {
+            "title_font_size": "24",
+            "show_text_content": true,
+            "background_textcontent": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)",
+            "title": "CUSTOMS AND AWARDS",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "Shop All",
+            "btn_url_1": "",
+            "btn_color_1": "#610909",
+            "btn_color_1_hover": "#000000",
+            "image_desktop": "shopify:\/\/shop_images\/bg1.jpg",
+            "text_content_pt": 25,
+            "text_content_pb": 26,
+            "text_content_pl": 50,
+            "text_content_pr": 50
+          }
+        },
+        "64f5f695-582a-4a14-bf44-ea7a44dff1e2": {
+          "type": "card",
+          "settings": {
+            "title_font_size": "24",
+            "show_text_content": true,
+            "background_textcontent": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)",
+            "title": "CUSTOM SADDLE OPTIONS",
+            "title_transform": "capitalize",
+            "text": "",
+            "btn_text_1": "More",
+            "btn_url_1": "",
+            "btn_color_1": "#de2828",
+            "btn_color_1_hover": "#000000",
+            "image_desktop": "shopify:\/\/shop_images\/bg2.jpg",
+            "text_content_pt": 20,
+            "text_content_pb": 20,
+            "text_content_pl": 11,
+            "text_content_pr": 11
+          }
+        }
+      },
+      "block_order": [
+        "226cea6c-8fbd-4d73-b20d-071c274a79ba",
+        "64f5f695-582a-4a14-bf44-ea7a44dff1e2"
+      ],
+      "settings": {
+        "full_width": false,
+        "section_mt": 10,
+        "section_mb": 10,
+        "section_height": 300,
+        "grid": "60"
+      }
+    },
+    "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f": {
+      "type": "maze-image-card-block",
+      "blocks": {
+        "0d6de889-a4a9-4a2e-b0c3-fdbb000c6216": {
+          "type": "card",
+          "settings": {
+            "title_font_size": "46",
+            "show_text_content": true,
+            "background_textcontent": "linear-gradient(180deg, rgba(84, 71, 91, 0.63) 100%, rgba(0, 0, 0, 1) 100%)",
+            "title": "NEW AND USED <br> SADDLES",
+            "title_transform": "uppercase",
+            "text": "Buy • Sell • Trade",
+            "btn_text_1": "Show Now",
+            "btn_url_1": "",
+            "btn_color_1": "#e22120",
+            "btn_color_1_hover": "#000000",
+            "image_desktop": "shopify:\/\/shop_images\/bg3.webp",
+            "text_content_pt": 30,
+            "text_content_pb": 29,
+            "text_content_pl": 100,
+            "text_content_pr": 100
+          }
+        }
+      },
+      "block_order": [
+        "0d6de889-a4a9-4a2e-b0c3-fdbb000c6216"
+      ],
+      "settings": {
+        "full_width": false,
+        "section_mt": 10,
+        "section_mb": 10,
+        "section_height": 440,
+        "grid": "100"
+      }
+    }
+  },
+  "order": [
+    "e29b67d0-cfe7-4611-8ab4-e08ce2f0420f",
+    "70180f9b-e004-4147-a124-fe0946970b93",
+    "rich_text",
+    "featured_collection",
+    "5edd084f-a486-4324-8a52-03bcdf96cfaf",
+    "94539076-83ce-495c-a3df-1e0146334d9b",
+    "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f"
+  ]
+}

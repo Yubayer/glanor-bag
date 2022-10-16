@@ -1,0 +1,8 @@
+<div class="mh-parent-link">
+  <a href="{{ link.url }}">{{ link.title }}</a>
+  {% if link.links.size > 0 %} 
+    {% if section.settings.showArrow %}
+      <span>&#129170;</span> 
+    {% endif %}
+  {% endif %}
+</div>

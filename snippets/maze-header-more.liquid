@@ -1,0 +1,29 @@
+<div class="mh-parent-link">
+    <a href="#">More </a>
+    {% if section.settings.showArrow %}
+      <span>&#129170;</span>
+    {% endif %}
+  </div>
+<ul class="mhm-parent-wrapper">
+  {% for link in section.settings.main-menu.links offset: limitSize %}     
+      <li class="parent-item-x">
+        {% if link.links.size > 0 %}
+        <div class="mh-child-link">
+          <a href="#">{{ link.title }}</a>
+         {% if section.settings.showArrow %} <span>&#129170;</span> {% endif %}
+        </div>
+          <ul class="mhm-child-wrapper">
+            {% for child_link in link.links %}
+                <li class="parent-item-x">
+                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+           <div class="mh-child-link">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </div>
+        {% endif %}
+      </li>   
+  {% endfor %}
+</ul>
