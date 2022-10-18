@@ -36,6 +36,8 @@
     }
 
     console.log(`Span: ${slide1} - ${slide2}`);
+    document.getElementById("Filter-Price-GTE").value = slide1
+    document.getElementById("Filter-Price-LTE").value = slide2
   }
 
   addEventListener('DOMContentLoaded', (event) => {
