@@ -1,61 +1,21 @@
 {{ 'price-range.css' | asset_url | stylesheet_tag }}
 
-{%- assign max_price_ = filter.range_max | money_without_currency | strip_html | escape -%}
-{%- if uses_comma_decimals -%}
-  {% assign minValue = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' %}
-{%- else -%}
-  {% assign minValue = filter.min_value.value | money_without_currency | replace: ',', '' %}
-{% endif %}
+{% liquid
+  assign max_price_ = filter.range_max | money_without_currency | strip_html | escape
+
+  if filter.min_value.value 
+      if uses_comma_decimals 
+        assign minValue = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+      else 
+        assign minValue = filter.min_value.value | money_without_currency | replace: ',', ''
+      endif
+  else
+      assign minValue = 0
+  endif
+%}
 
 
 <div class="range-slider">
   <input type="range" min="0" max="100" step="1" value="{{ minValue }}" class="range-slider__input" />
   <input type="range" min="0" max="{{ max_price_ }}" step="1" value="{{ max_price_ }}" class="range-slider__input" />
 </div>
-
-<script>
-  //   const onInput = (parent, e) => {
-  //   const slides = parent.querySelectorAll('input');
-  //   const min = parseFloat(slides[0].min);
-  //   const max = parseFloat(slides[0].max);
-
-  //   let slide1 = parseFloat(slides[0].value);
-  //   let slide2 = parseFloat(slides[1].value);
-
-  //   const percentageMin = (slide1 / (max - min)) * 100;
-  //   const percentageMax = (slide2 / (max - min)) * 100;
-
-  //   parent.style.setProperty('--range-slider-value-low', `${percentageMin}`);
-  //   parent.style.setProperty('--range-slider-value-high', `${percentageMax}`);
-
-  //   if (slide1 > slide2) {
-  //     const tmp = slide2;
-  //     slide2 = slide1;
-  //     slide1 = tmp;
-
-  //     if (e?.currentTarget === slides[0]) {
-  //       slides[0].insertAdjacentElement('beforebegin', slides[1]);
-  //     } else {
-  //       slides[1].insertAdjacentElement('afterend', slides[0]);
-  //     }
-  //   }
-
-  //   console.log(`Span: ${slide1} - ${slide2}`);
-  //   document.getElementById("Filter-Price-GTE").value = slide1
-  //   document.getElementById("Filter-Price-LTE").value = slide2
-  // }
-
-
-  //  document.querySelectorAll('.range-slider').forEach(range => range.addEventListener('input', (e) => {
-  //   onInput(range, e)
-  //  }))
-
-  // addEventListener('DOMContentLoaded', (event) => {
-  //   document.querySelectorAll('.range-slider').forEach(range => range.querySelectorAll('input').forEach((input) => {
-  //     if (input.type === 'range') {
-  //       input.oninput = (e) => onInput(range, e);
-  //       onInput(range);
-  //     }
-  //   }))
-  // }); 
-</script>
