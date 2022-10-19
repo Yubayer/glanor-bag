@@ -13,15 +13,15 @@
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-                    assign sort_by = results.sort_by | default: results.default_sort_by
-                    assign total_active_values = 0
-                    if results.url
-                      assign results_url = results.url
-                    else
-                      assign terms = results.terms | escape
-                      assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
-                    endif
-                  -%}
+  assign sort_by = results.sort_by | default: results.default_sort_by
+  assign total_active_values = 0
+  if results.url
+    assign results_url = results.url
+  else
+    assign terms = results.terms | escape
+    assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+  endif
+-%}
 
 
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}">
@@ -108,120 +108,125 @@
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
                 {% when 'boolean' or 'list' %}
-                  <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}" {% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
-                    <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
-                      <div>
-                        <span>{{ filter.label | escape }}
-                          {%- if filter_type == 'vertical' -%}
-                            <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
-                              ({{ filter.active_values.size }}
-                              )</span>
-                          {% endif %}
-                        </span>
-                        {% render 'icon-caret' %}
-                      </div>
-                    </summary>
-                    <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
-                      {%- if filter_type != 'vertical' -%}
-                        <div class="facets__header">
-                          <span class="facets__selected no-js-hidden">{{ 'products.facets.filters_selected' | t: count: filter.active_values.size }}
+                  {% if filter.label == 'Color' %}
+                    {% render 'color-swatch-filter', filter: filter %}
+                  {% else %}
+                    <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}" {% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
+                      <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
+                        <div>
+                          <span>{{ filter.label | escape }}
+                            {%- if filter_type == 'vertical' -%}
+                              <span class="facets__selected no-js-hidden{% if filter.active_values.size == 0 %} hidden{% endif %}">
+                                ({{ filter.active_values.size }}
+                                )</span>
+                            {% endif %}
                           </span>
-                          <facet-remove>
-                            <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
-                              {{ 'products.facets.reset' | t }}
-                            </a>
-                          </facet-remove>
+                          {% render 'icon-caret' %}
                         </div>
-                      {%- endif -%}
-                      <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
-                        <legend class="visually-hidden">{{ filter.label | escape }}
-                        </legend>
-                        <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden" role="list">
-                          {%- for value in filter.values -%}
-                            <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
-                              <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
-                                <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-
-                                <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                </svg>
-
-                                <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                                  <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                                <span aria-hidden="true">{{ value.label | escape }}
-                                  ({{ value.count }}
-                                  )</span>
-                                <span class="visually-hidden">{{ value.label | escape }}
-                                  ({% if value.count == 1 %}
-                                    {{ 'products.facets.product_count_simple.one' | t: count: value.count }}
-                                  {% else %}
-                                    {{ 'products.facets.product_count_simple.other' | t: count: value.count }}
-                                  {% endif %})</span>
-                              </label>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                        {% comment %}
-                          No show more for no JS
-                        {% endcomment %}
-                        <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} no-js-list list-unstyled no-js" role="list">
-                          {%- for value in filter.values -%}
-                            <li class="list-menu__item facets__item">
-                              <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
-                                <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
-
-                                <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                  <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                </svg>
-
-                                <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                                  <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                                <span aria-hidden="true">{{ value.label | escape }}
-                                  ({{ value.count }}
-                                  )</span>
-                                <span class="visually-hidden">{{ value.label | escape }}
-                                  ({% if value.count == 1 %}
-                                    {{ 'products.facets.product_count_simple.one' | t: count: value.count }}
-                                  {% else %}
-                                    {{ 'products.facets.product_count_simple.other' | t: count: value.count }}
-                                  {% endif %})</span>
-                              </label>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      </fieldset>
-                      {%- if filter.values.size > 10 and filter_type == 'vertical' -%}
-                        <show-more-button>
-                          <button class="button-show-more link underlined-link no-js-hidden" id="Show-More-{{ forloop.index }}-{{ section.id }}" type="button">
-                            <span class="label-show-more label-text">
-                              <span aria-hidden="true">+
-                              </span>
-                              {{ 'products.facets.show_more' | t }}
+                      </summary>
+                      <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
+                        {%- if filter_type != 'vertical' -%}
+                          <div class="facets__header">
+                            <span class="facets__selected no-js-hidden">{{ 'products.facets.filters_selected' | t: count: filter.active_values.size }}
                             </span>
-                            <span class="label-show-less label-text hidden">
-                              <span aria-hidden="true">-
+                            <facet-remove>
+                              <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
+                                {{ 'products.facets.reset' | t }}
+                              </a>
+                            </facet-remove>
+                          </div>
+                        {%- endif -%}
+                        <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
+                          <legend class="visually-hidden">{{ filter.label | escape }}
+                          </legend>
+                          <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden" role="list">
+                            {%- for value in filter.values -%}
+                              <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                                <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+                                  <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+
+                                  <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  </svg>
+
+                                  <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+
+                                  <span aria-hidden="true">{{ value.label | escape }}
+                                    ({{ value.count }}
+                                    )</span>
+                                  <span class="visually-hidden">{{ value.label | escape }}
+                                    ({% if value.count == 1 %}
+                                      {{ 'products.facets.product_count_simple.one' | t: count: value.count }}
+                                    {% else %}
+                                      {{ 'products.facets.product_count_simple.other' | t: count: value.count }}
+                                    {% endif %})</span>
+                                </label>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                          {% comment %}
+                            No show more for no JS
+                          {% endcomment %}
+                          <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} no-js-list list-unstyled no-js" role="list">
+                            {%- for value in filter.values -%}
+                              <li class="list-menu__item facets__item">
+                                <label for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+                                  <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}-no-js" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>
+
+                                  <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                  </svg>
+
+                                  <svg class="icon icon-checkmark" width="1.1rem" height="0.7rem" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                    <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+
+                                  <span aria-hidden="true">{{ value.label | escape }}
+                                    ({{ value.count }}
+                                    )</span>
+                                  <span class="visually-hidden">{{ value.label | escape }}
+                                    ({% if value.count == 1 %}
+                                      {{ 'products.facets.product_count_simple.one' | t: count: value.count }}
+                                    {% else %}
+                                      {{ 'products.facets.product_count_simple.other' | t: count: value.count }}
+                                    {% endif %})</span>
+                                </label>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </fieldset>
+                        {%- if filter.values.size > 10 and filter_type == 'vertical' -%}
+                          <show-more-button>
+                            <button class="button-show-more link underlined-link no-js-hidden" id="Show-More-{{ forloop.index }}-{{ section.id }}" type="button">
+                              <span class="label-show-more label-text">
+                                <span aria-hidden="true">+
+                                </span>
+                                {{ 'products.facets.show_more' | t }}
                               </span>
-                              {{ 'products.facets.show_less' | t }}
-                            </span>
-                          </button>
-                        </show-more-button>
-                      {%- endif %}
-                    </div>
-                  </details>
+                              <span class="label-show-less label-text hidden">
+                                <span aria-hidden="true">-
+                                </span>
+                                {{ 'products.facets.show_less' | t }}
+                              </span>
+                            </button>
+                          </show-more-button>
+                        {%- endif %}
+                      </div>
+                    </details>
+                  {% endif %}
+
                 {% when 'price_range' %}
                   {% liquid
-                           assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
-                           assign uses_comma_decimals = false
-                           if currencies_using_comma_decimals contains cart.currency.iso_code
-                             assign uses_comma_decimals = true
-                           endif
-                         %}
+                             assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                             assign uses_comma_decimals = false
+                             if currencies_using_comma_decimals contains cart.currency.iso_code
+                               assign uses_comma_decimals = true
+                             endif
+                           %}
 
 
                   <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}" {% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
@@ -234,8 +239,8 @@
                     </summary>
 
                     {% render 'price-range', 
-                       filter: filter
-                     %}
+                         filter: filter
+                       %}
 
                     <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
                       <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
