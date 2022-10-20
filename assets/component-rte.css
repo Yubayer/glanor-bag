@@ -3,7 +3,7 @@
   content: '';
   display: block;
 }
-/* .rich-text-border{
+.rich-text-border{
   position: relative;
 }
 .rich-text-border:before{
@@ -15,7 +15,7 @@
   height: 1px;
   border: 1px solid #aaa;
   
-} */
+}
 .rte > p:first-child {
   margin-top: 0;
 }
