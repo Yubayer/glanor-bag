@@ -116,7 +116,7 @@
           "type": "heading",
           "settings": {
             "heading": "<p>WELCOME TO TESKEY'S SADDLE SHOP<\/p>",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text": {
