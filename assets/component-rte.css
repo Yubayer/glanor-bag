@@ -3,7 +3,19 @@
   content: '';
   display: block;
 }
-
+.rich-text-border{
+  position: relative;
+}
+.rich-text-border:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #aaa;
+  
+}
 .rte > p:first-child {
   margin-top: 0;
 }
