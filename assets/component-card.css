@@ -4,6 +4,9 @@
 .card__heading{
   font-size: 18px;
 }
+.card-information .caption-large{
+  font-size: 20px;
+}
 .card-wrapper {
   color: inherit;
   height: 100%;
