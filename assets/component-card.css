@@ -1,5 +1,5 @@
 .card__information{
-  text-align: center !important;
+  text-align: center;
 }
 .card__heading{
   font-size: 18px;
@@ -84,9 +84,9 @@
   background-color: transparent;
 }
 
-.card-information {
+/* .card-information {
   text-align: var(--text-alignment);
-}
+} */
 
 .card__media,
 .card .media {
