@@ -19,15 +19,7 @@
 h2.heading-font-size{
   font-size: 26px;
 }
-.feature-divider {
-    width: 100%;
-    margin-bottom: 20px;
-    display: block;
-    border: 0;
-    border-color: #aaa;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-}
+
 @media screen and (min-width: 750px) {
   .rich-text__wrapper {
     width: 100%;
