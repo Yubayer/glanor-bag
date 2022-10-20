@@ -1,9 +1,10 @@
 .card__information{
-  text-align: center;
+  text-align: center !important;
 }
 .card__heading{
   font-size: 18px;
 }
+..card-information
 .card-wrapper {
   color: inherit;
   height: 100%;
