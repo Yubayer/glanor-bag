@@ -1,3 +1,6 @@
+.card__heading{
+  font-size: 18px;
+}
 .card-wrapper {
   color: inherit;
   height: 100%;
