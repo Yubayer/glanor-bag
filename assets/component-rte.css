@@ -1,13 +1,7 @@
 .rte:after {
-    clear: both;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 69%;
-    left: 21px;
-    width: 90%;
-    height: 1px;
-    background: #aaa;
+  clear: both;
+  content: '';
+  display: block;
 }
 
 .rte > p:first-child {
