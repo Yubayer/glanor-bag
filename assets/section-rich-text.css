@@ -16,6 +16,9 @@
 .rich-text__blocks {
   width: 100%;
 }
+h2.heading-font-size{
+  font-size: 26px;
+}
 
 @media screen and (min-width: 750px) {
   .rich-text__wrapper {
