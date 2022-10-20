@@ -34,7 +34,7 @@ h2.heading-font-size{
   }
 
   .rich-text__blocks {
-    max-width: 50rem;
+/*     max-width: 50rem; */
   }
   h2.heading-font-size{
     font-size: 20px;
@@ -43,7 +43,7 @@ h2.heading-font-size{
 
 @media screen and (min-width: 990px) {
   .rich-text__blocks {
-    max-width: 78rem;
+/*     max-width: 78rem; */
   }
 }
 
