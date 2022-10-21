@@ -219,7 +219,8 @@
         "section_mt": 10,
         "section_mb": 10,
         "section_height": 300,
-        "grid": "60"
+        "grid": "60",
+        "text-out-mbl": false
       }
     },
     "94539076-83ce-495c-a3df-1e0146334d9b": {
@@ -275,7 +276,8 @@
         "section_mt": 10,
         "section_mb": 10,
         "section_height": 300,
-        "grid": "60"
+        "grid": "60",
+        "text-out-mbl": false
       }
     },
     "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f": {
@@ -310,7 +312,8 @@
         "section_mt": 10,
         "section_mb": 10,
         "section_height": 440,
-        "grid": "100"
+        "grid": "100",
+        "text-out-mbl": true
       }
     }
   },
