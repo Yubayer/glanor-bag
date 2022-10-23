@@ -1,12 +1,35 @@
+<style>
+ .collection-banner{
+   background:url({{ section.settings.bg_image | img_url: 'master' }});
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: #f0f0f0;
+ } 
+</style>
+<section class="collection-banner">
+  
+</section>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Collection Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Collection Banner"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
