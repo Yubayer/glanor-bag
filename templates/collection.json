@@ -1,79 +1,5 @@
 {
   "sections": {
-    "77b2dab4-ebb9-4e91-8828-1d19f9e1ce67": {
-      "type": "collection-page-slider",
-      "blocks": {
-        "c3ddedba-793f-4f37-82a4-a7d6b29802a8": {
-          "type": "slider",
-          "settings": {
-            "show_text_content": false,
-            "title": "",
-            "title_transform": "capitalize",
-            "text": "",
-            "btn_text_1": "",
-            "btn_url_1": "",
-            "btn_color_1": "#000000",
-            "btn_color_1_hover": "#000000",
-            "btn_text_2": "",
-            "btn_url_2": "",
-            "btn_color_2": "#000000",
-            "btn_color_2_hover": "#000000",
-            "image_desktop": "shopify:\/\/shop_images\/Banner-1-Mobile.png"
-          }
-        },
-        "e5fbd78a-a88b-4469-bd12-de19d2554fc0": {
-          "type": "slider",
-          "settings": {
-            "show_text_content": false,
-            "title": "",
-            "title_transform": "capitalize",
-            "text": "",
-            "btn_text_1": "",
-            "btn_url_1": "",
-            "btn_color_1": "#000000",
-            "btn_color_1_hover": "#000000",
-            "btn_text_2": "",
-            "btn_url_2": "",
-            "btn_color_2": "#000000",
-            "btn_color_2_hover": "#000000",
-            "image_desktop": "shopify:\/\/shop_images\/Mask_Group_6.png"
-          }
-        },
-        "f5dc27e1-01da-4c17-8a9e-039c41fcbd5f": {
-          "type": "slider",
-          "settings": {
-            "show_text_content": false,
-            "title": "",
-            "title_transform": "capitalize",
-            "text": "",
-            "btn_text_1": "",
-            "btn_url_1": "",
-            "btn_color_1": "#000000",
-            "btn_color_1_hover": "#000000",
-            "btn_text_2": "",
-            "btn_url_2": "",
-            "btn_color_2": "#000000",
-            "btn_color_2_hover": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "c3ddedba-793f-4f37-82a4-a7d6b29802a8",
-        "e5fbd78a-a88b-4469-bd12-de19d2554fc0",
-        "f5dc27e1-01da-4c17-8a9e-039c41fcbd5f"
-      ],
-      "settings": {
-        "full_width": false,
-        "slider_mt": 10,
-        "slider_mb": 10,
-        "slider_height": 600,
-        "background": "linear-gradient(180deg, rgba(38, 138, 167, 0.47) 100%, rgba(0, 0, 0, 1) 100%)",
-        "text_content_pt": 10,
-        "text_content_pb": 10,
-        "text_content_pl": 10,
-        "text_content_pr": 10
-      }
-    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -102,7 +28,6 @@
     }
   },
   "order": [
-    "77b2dab4-ebb9-4e91-8828-1d19f9e1ce67",
     "banner",
     "product-grid"
   ]
