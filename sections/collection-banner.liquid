@@ -38,8 +38,27 @@
     letter-spacing: -2.85px;
     line-height: 70px;
  }
+.cb-on-mobile{
+   display: none;
+ }
+.cb-on-desktop{
+     display: block;
+}
+ @media screen and (max-width: 958px){
+   .cb-on-mobile{
+     display: block;
+   }
+  .cb-on-desktop{
+     display: none;
+  }
+ }
 </style>
 <section class="collection-banner">
+  <div class="cb-on-mobile">
+      <div class="cb-center">
+        <h1 class="cb-title-big">Backpacks</h1>
+      </div>
+  </div>
   <div class="collection-banner-inner">
     <div class="c-b-cell">
       <div class="cb-on-desktop">
