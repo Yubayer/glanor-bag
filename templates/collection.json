@@ -1,5 +1,12 @@
 {
   "sections": {
+    "53aa6c9c-4e6e-438a-b284-a4ddff734315": {
+      "type": "collection-banner",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg3.webp",
+        "title": ""
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -28,6 +35,7 @@
     }
   },
   "order": [
+    "53aa6c9c-4e6e-438a-b284-a4ddff734315",
     "banner",
     "product-grid"
   ]
