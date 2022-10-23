@@ -214,9 +214,11 @@
                 {% if block.type == "footer-menu" %}
                   <div class="custom-footer-menu-wrapper">
                     <h6>{{ block.settings.footer-menu.title }}</h6>
-                    {% for link in block.settings.footer-menu.links %}
-                    	<a href="{{ link.url }}">{{ link.title }}</a>
-                    {% endfor %}
+                    <div class="footer-menu-items">
+                      {% for link in block.settings.footer-menu.links %}
+                      	<a href="{{ link.url }}">{{ link.title }}</a>
+                      {% endfor %}
+                    </div>
                   </div>
                  {% endif %}
               {% endfor %}
