@@ -1093,11 +1093,7 @@ summary::-webkit-details-marker {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
-@media screen and (max-width: 800px) and (min-width: 481px){
-/*   .grid--1-col-tablet-down .grid__item{
-    width: 50% !important;
-  } */
-}
+
 @media screen and (max-width: 989px) {
   .grid--1-col-tablet-down .grid__item {
     width: 100%;
@@ -2959,5 +2955,12 @@ details-disclosure > details {
 
   .localization-form__select:focus {
     outline: transparent solid 1px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 481px){
+  .grid--1-col-tablet-down .grid__item{
+    width: 50%;
+    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
