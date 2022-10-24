@@ -13,18 +13,45 @@ class FacetFiltersForm extends HTMLElement {
     const facetWrapper = this.querySelector('#FacetsWrapperDesktop');
     if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
 
-    // document.querySelectorAll('.range-slider').forEach(range => range.addEventListener('input', (e) => {
-    //   FacetFiltersForm.priceRangeSlider(range, e)
-    // }))
+    FacetFiltersForm.hadnlePriceRangeEvent()
+  }
 
-      addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('.range-slider').forEach(range => range.querySelectorAll('input').forEach((input) => {
-          if (input.type === 'range') {
-            input.oninput = (e) => FacetFiltersForm.priceRangeSlider(range, e);
-            FacetFiltersForm.priceRangeSlider(range);
-          }
-        }))
-      })
+  static hadnlePriceRangeEvent() {
+    let sliderTrack = document.querySelector(".range-slider-track");
+
+    let rangeSliders = document.querySelectorAll('.range-slider-container input')
+    let sliderMaxValue = rangeSliders[1].max;
+    let rangeInputs = document.querySelectorAll('.rander-slider-values input[type=number]')
+
+    rangeSliders.forEach((input, index) => input.addEventListener('input', e => {
+        rangeInputs[index].value = input.value
+        if(index === 0){
+            FacetFiltersForm.rangeSliderHandler(rangeSliders, rangeSliders[0], rangeSliders[1])
+            document.getElementById("Filter-Price-GTE").value = rangeSliders[0].value
+        } else {
+            FacetFiltersForm.rangeSliderHandler(rangeSliders, rangeSliders[1], rangeSliders[0])
+            document.getElementById("Filter-Price-LTE").value = rangeSliders[1].value
+        } 
+    }))
+  }
+
+
+  static rangeSliderHandler(rangeSliders, sliderX, sliderY) {
+      if (parseInt(rangeSliders[1].value) - parseInt(rangeSliders[0].value) <= 0)
+          sliderX.value = parseInt(sliderY.value) - 0;
+
+      sliderX.classList.add('active-range-circle')
+      sliderY.classList.remove('active-range-circle')
+
+      FacetFiltersForm.sliderTrackHandler(rangeSliders, rangeSliders[0].value, rangeSliders[1].value);
+  }
+
+  static sliderTrackHandler(rangeSliders, valueX, valueY) {
+      let sliderMaxValue = rangeSliders[1].max;
+      let percent1 = ((valueX / sliderMaxValue) * 100);
+      let percent2 = ((valueY / sliderMaxValue) * 100);
+
+      document.querySelector(".range-slider-track").style.background = `linear-gradient(to right, var(--range-line) ${percent1}% , var(--range-circle) ${percent1}% , var(--range-circle) ${percent2}%, var(--range-line) ${percent2}%)`;
   }
 
   static setListeners() {
@@ -43,7 +70,6 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderPage(searchParams, event, updateURLHash = true) {
-    FacetFiltersForm.priceRangeEventRender()
     FacetFiltersForm.searchParamsPrev = searchParams;
     const sections = FacetFiltersForm.getSections();
     const countContainer = document.getElementById('ProductCount');
@@ -68,51 +94,6 @@ class FacetFiltersForm extends HTMLElement {
     if (updateURLHash) FacetFiltersForm.updateURLHash(searchParams);
   }
 
-  static priceRangeEventRender() {
-    document.querySelectorAll('.range-slider').forEach(range => range.addEventListener('input', (e) => {
-      FacetFiltersForm.priceRangeSlider(range, e)
-    }))
-
-    // addEventListener('DOMContentLoaded', (event) => {
-    //   document.querySelectorAll('.range-slider').forEach(range => range.querySelectorAll('input').forEach((input) => {
-    //     if (input.type === 'range') {
-    //       input.oninput = (e) => FacetFiltersForm.priceRangeSlider(range, e);
-    //       FacetFiltersForm.priceRangeSlider(range);
-    //     }
-    //   }))
-    // })
-  }
-
-  static priceRangeSlider(parent, e) {
-      const slides = parent.querySelectorAll('input');
-      const min = parseFloat(slides[0].min);
-      const max = parseFloat(slides[0].max);
-
-      let slide1 = parseFloat(slides[0].value);
-      let slide2 = parseFloat(slides[1].value);
-
-      const percentageMin = (slide1 / (max - min)) * 100;
-      const percentageMax = (slide2 / (max - min)) * 100;
-
-      parent.style.setProperty('--range-slider-value-low', `${percentageMin}`);
-      parent.style.setProperty('--range-slider-value-high', `${percentageMax}`);
-
-      if (slide1 > slide2) {
-        const tmp = slide2;
-        slide2 = slide1;
-        slide1 = tmp;
-
-        if (e?.currentTarget === slides[0]) {
-          slides[0].insertAdjacentElement('beforebegin', slides[1]);
-        } else {
-          slides[1].insertAdjacentElement('afterend', slides[0]);
-        }
-      }
-
-      console.log(`Span: ${slide1} - ${slide2}`);
-      document.getElementById("Filter-Price-GTE").value = slide1
-      document.getElementById("Filter-Price-LTE").value = slide2
-  }
 
   static renderSectionFromFetch(url, event) {
     fetch(url)
@@ -134,7 +115,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderProductGridContainer(html) {
-    FacetFiltersForm.priceRangeEventRender()
+    FacetFiltersForm.hadnlePriceRangeEvent()
     document.getElementById('ProductGridContainer').innerHTML = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductGridContainer').innerHTML;
   }
 

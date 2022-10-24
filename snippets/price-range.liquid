@@ -1,21 +1,174 @@
-{{ 'price-range.css' | asset_url | stylesheet_tag }}
-
 {% liquid
-  assign max_price_ = filter.range_max | money_without_currency | strip_html | escape
+  assign max_priceAmount = filter.range_max | money_without_currency | replace: ',', ''
 
-  if filter.min_value.value 
-      if uses_comma_decimals 
-        assign minValue = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
-      else 
-        assign minValue = filter.min_value.value | money_without_currency | replace: ',', ''
-      endif
-  else
-      assign minValue = 0
+  if filter.max_value.value
+    if uses_comma_decimals
+      assign maxValue = filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+    else
+      assign maxValue = filter.max_value.value | money_without_currency | replace: ',', ''
+    endif
+   endif
+  
+  if filter.min_value.value
+     if uses_comma_decimals 
+      assign minValue = filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.'
+     else
+       assign minValue = filter.min_value.value | money_without_currency | replace: ',', ''
+    endif
+   endif
+
+  if minValue == blank
+    assign minValue = 0
   endif
-%}
 
+  if maxValue == blank
+    assign maxValue = max_priceAmount
+  endif
 
-<div class="range-slider">
-  <input type="range" min="0" max="100" step="1" value="{{ minValue }}" class="range-slider__input" />
-  <input type="range" min="0" max="{{ max_price_ }}" step="1" value="{{ max_price_ }}" class="range-slider__input" />
+  assign parcent1 = minValue | divided_by: max_priceAmount | times: 100
+  assign parcent2 = maxValue | divided_by: max_priceAmount | times: 100
+%}  
+
+<style>
+  :root {
+      --range-circle: black;
+      --range-line: rgb(167, 143, 143);
+      --range-active-line: black;
+      --range-circle-height: 15px;
+      --range-line-height: 5px;
+      --range-circle-mt: calc((var(--range-circle-height) / 2 - var(--range-line-height) / 2) * -1);
+  }
+
+  .price-filter-vertical{
+      display: none;
+  }
+
+  .rander-slider-wrapper {
+      position: relative;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 10px 0px;
+      border-radius: 10px;
+      margin-top: var(--range-circle-mt);
+  }
+
+  .range-slider-container {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      margin-top: 0px;
+  }
+
+  .range-slider-container input[type="range"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      outline: none;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+      pointer-events: none;
+  }
+
+.range-slider-track:empty{
+  display: block;
+}
+
+  .range-slider-track {
+      width: 100%;
+      height: var(--range-line-height);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      border-radius: 5px;
+      background: linear-gradient(to right, var(--range-line) {{ parcent1 | append: '%' }}, var(--range-circle) {{ parcent1 | append: '%' }}, var(--range-circle) {{ parcent2 | append: '%' }}, var(--range-line) {{ parcent2 | append: '%' }});
+  }
+
+  .range-slider-container input[type="range"]::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: var(--range-line-height);
+  }
+
+  .range-slider-container input[type="range"]::-moz-range-track {
+      -moz-appearance: none;
+      height: var(--range-line-height);
+  }
+
+  .range-slider-container input[type="range"]::-ms-track {
+      appearance: none;
+      height: var(--range-line-height);
+  }
+
+  .range-slider-container input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: var(--range-circle-height);
+      width: var(--range-circle-height);
+      background-color: var(--range-circle);
+      cursor: pointer;
+      margin-top: var(--range-circle-mt);
+      pointer-events: auto;
+      border-radius: 0%;
+  }
+
+  .range-slider-container input[type="range"]::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: var(--range-circle-height);
+      width: var(--range-circle-height);
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: var(--range-circle);
+      pointer-events: auto;
+  }
+
+  .range-slider-container input[type="range"]::-ms-thumb {
+      appearance: none;
+      height: var(--range-circle-height);
+      width: var(--range-circle-height);
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: var(--range-circle);
+      pointer-events: auto;
+  }
+
+  .range-slider-container input[type="range"]:active::-webkit-slider-thumb {
+      background-color: #ffffff;
+      border: 3px solid var(--range-circle);
+  }
+
+  .rander-slider-values {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .rander-slider-values input[type=number] {
+      background: #080808;
+      border: none;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 6px 2px 6px 10px;
+      width: max-content;
+      color: white;
+      font-size: 15px;
+  }
+
+  .active-range-circle {
+      z-index: 9;
+  }
+</style>
+
+  
+<div class="rander-slider-wrapper">
+    <div class="rander-slider-values">
+        <input data-slider="min" min="0" max="{{ max_priceAmount }}" value="{{ minValue }}" type="number" class="min-input" readonly>
+        <input data-slider="max" min="0" max="{{ max_priceAmount }}" value="{{ maxValue }}" type="number" class="min-input" readonly>
+    </div>
+    <div class="range-slider-container">
+        <div class="range-slider-track"></div>
+        <input type="range" min="0" max="{{ max_priceAmount }}" value="{{ minValue }}" id="slider-1">
+        <input type="range" min="0" max="{{ max_priceAmount }}" value="{{ maxValue }}" id="slider-2">
+    </div>
 </div>

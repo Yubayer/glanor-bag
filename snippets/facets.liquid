@@ -239,10 +239,10 @@
                     </summary>
 
                     {% render 'price-range', 
-                         filter: filter
-                       %}
+                        filter: filter
+                    %}
 
-                    <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
+                    <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %} price-filter-vertical">
                       <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
                         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                         <span class="facets__selected">{{ "products.facets.max_price" | t: price: max_price_amount }}
