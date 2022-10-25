@@ -20,9 +20,18 @@
  .c-b-cell{
     padding-top: 40px;
     padding-bottom: 40px;
-    vertical-align: middle;
+    
     display: table-cell;
 /*     vertical-align: middle; */
+ }
+ .align-cb-top-left{
+    vertical-align: revert;
+ }
+.align-cb-middle-left{
+    vertical-align: middle;
+ }
+ .align-cb-bottom-left{
+    vertical-align: bottom;
  }
  .cb-on-desktop{
     display: block;
@@ -103,19 +112,43 @@
       "label": "Collection title alignment",
       "options": [
         {
-          "value": "top",
-          "label": "Top"
+          "value": "top-left",
+          "label": "Top Left"
         },
         {
-          "value": "middle",
-          "label": "Middle"
+          "value": "middle-left",
+          "label": "Middle Left"
         },
         {
-          "value": "bottom",
-          "label": "Bottom"
+          "value": "bottom-left",
+          "label": "Bottom Left"
+        },
+                {
+          "value": "top-center",
+          "label": "Top Center"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle Center"
+        },
+        {
+          "value": "bottom-center",
+          "label": "Bottom Center"
+        },
+        {
+          "value": "top-right",
+          "label": "Top Right"
+        },
+        {
+          "value": "middle-right",
+          "label": "Middle Right"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom-right"
         }
       ],
-      "default": "middle"
+      "default": "middle-left"
     }
   ],
 
