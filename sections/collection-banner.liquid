@@ -92,7 +92,9 @@
 <div class=" collection-banner">
 
   <div class=" collection-banner-inner">
-    <div class="c-b-cell">
+    <div class="c-b-cell {% if section.settings.collection_title_align == 'top-left' %} align-cb-top-left {% elsif section.settings.collection_title_align == 'middle-left' %} align-cb-middle-left
+      {% elsif section.settings.collection_title_align == 'bottom-left' %} align-cb-bottom-left
+      {% endif %}">
       <div class="cb-on-desktop">
           <div class="cb-center">
             <h1 class="cb-title-big">{{ collection.title }}</h1>
