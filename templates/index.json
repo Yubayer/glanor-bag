@@ -81,24 +81,24 @@
         "81697a27-b1e8-484c-a3cb-b69e43504d24": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
-            "btn_text": "Track 1",
+            "image": "shopify:\/\/shop_images\/Sub-1.png",
+            "btn_text": "",
             "btn_url": ""
           }
         },
         "e78623de-a668-42cc-a6ee-b4f967519350": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
-            "btn_text": "Track 2",
+            "image": "shopify:\/\/shop_images\/Sub-2.png",
+            "btn_text": "",
             "btn_url": ""
           }
         },
         "5a6e771d-f47e-457c-9921-4447131d8590": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Boots_400x_31706f65-03c4-4033-a02e-040aab84ed40.webp",
-            "btn_text": "Track 3",
+            "image": "shopify:\/\/shop_images\/Sub-3.png",
+            "btn_text": "",
             "btn_url": ""
           }
         }
@@ -117,14 +117,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>WELCOME TO TESKEY'S SADDLE SHOP<\/p>",
-            "heading_size": "h2"
+            "heading": "<p>WELCOME TO GLANORE<\/p>",
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Teskey’s Saddle Shop is one of the most trusted names in the horse industry. With over 1000 saddles, hundreds of bits and spurs, boots, clothing, Case knives, ranch and farm equipment and equine medical supplies, we are your one stop shop for all of your equestrian and western apparel needs.<\/p><p><strong>From the ranch to the rodeo, Teskey's has you covered.<\/strong><\/p>"
+            "text": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<\/p><p><strong>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<\/strong><\/p>"
           }
         }
       },
@@ -137,8 +137,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "featured_collection": {
