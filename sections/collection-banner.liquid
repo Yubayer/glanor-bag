@@ -3,7 +3,7 @@
    margin-top: 15px;
  }
  .collection-banner{
-   background:{% if collection.featured_image != blank %}url({{ collection.featured_image | img_url: 'master' }}){% endif %}};
+   background:url({{ collection.featured_image | img_url: 'master' }});
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
