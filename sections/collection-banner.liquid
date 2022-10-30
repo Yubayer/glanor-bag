@@ -2,6 +2,7 @@
  .collection-banner-container{
    margin-top: 15px;
  }
+  {% if collection.featured_image != blank %}
  .collection-banner{
    background:url({{ collection.featured_image | img_url: 'master' }});
    background-size: cover;
@@ -10,6 +11,7 @@
    background-color: #f0f0f0;
    width: 100%;
  } 
+ {% endif %}
  .collection-banner-inner{
     min-height: 383px;
     top: 0;
