@@ -323,49 +323,6 @@
         "text-out-mbl": true
       }
     },
-    "509d2120-b684-4b11-969b-996286582395": {
-      "type": "instagram-section",
-      "blocks": {
-        "197ca5e8-b6ea-46a6-9771-bf7f42247a98": {
-          "type": "photos",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/insta-1.png"
-          }
-        },
-        "eabc377a-4504-48d4-ae3d-7957925a6846": {
-          "type": "photos",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/insta-2.png"
-          }
-        },
-        "80772bad-198f-4395-8c83-fbbc0f22bf82": {
-          "type": "photos",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/insta-3.png"
-          }
-        },
-        "86aa6538-b1a2-4c7c-a7df-a58d7b730328": {
-          "type": "photos",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/insta-4.png"
-          }
-        }
-      },
-      "block_order": [
-        "197ca5e8-b6ea-46a6-9771-bf7f42247a98",
-        "eabc377a-4504-48d4-ae3d-7957925a6846",
-        "80772bad-198f-4395-8c83-fbbc0f22bf82",
-        "86aa6538-b1a2-4c7c-a7df-a58d7b730328"
-      ],
-      "settings": {
-        "collection_link": ""
-      }
-    },
-    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a": {
-      "type": "our-promise",
-      "settings": {
-      }
-    },
     "f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c": {
       "type": "image-with-text",
       "blocks": {
@@ -409,6 +366,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "509d2120-b684-4b11-969b-996286582395": {
+      "type": "instagram-section",
+      "blocks": {
+        "197ca5e8-b6ea-46a6-9771-bf7f42247a98": {
+          "type": "photos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-1.png"
+          }
+        },
+        "eabc377a-4504-48d4-ae3d-7957925a6846": {
+          "type": "photos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-2.png"
+          }
+        },
+        "80772bad-198f-4395-8c83-fbbc0f22bf82": {
+          "type": "photos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-3.png"
+          }
+        },
+        "86aa6538-b1a2-4c7c-a7df-a58d7b730328": {
+          "type": "photos",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/insta-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "197ca5e8-b6ea-46a6-9771-bf7f42247a98",
+        "eabc377a-4504-48d4-ae3d-7957925a6846",
+        "80772bad-198f-4395-8c83-fbbc0f22bf82",
+        "86aa6538-b1a2-4c7c-a7df-a58d7b730328"
+      ],
+      "settings": {
+        "collection_link": ""
+      }
+    },
+    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a": {
+      "type": "our-promise",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -419,8 +419,8 @@
     "featured_collection",
     "94539076-83ce-495c-a3df-1e0146334d9b",
     "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f",
+    "f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c",
     "509d2120-b684-4b11-969b-996286582395",
-    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a",
-    "f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c"
+    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a"
   ]
 }
