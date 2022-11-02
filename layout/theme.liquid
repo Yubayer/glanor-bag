@@ -29,6 +29,28 @@
 
     {% render 'meta-tags' %}
 
+    <style>
+      @font-face {
+          font-family: "Geometria-Bold";
+          src: url({{ 'https://cdn.shopify.com/s/files/1/0596/6440/0575/files/Geometria-Bold.woff?v=1667413591' | file_url }}) format("woff");
+      }
+  
+      @font-face {
+          font-family: "Geometria-ExtraBold";
+          src: url({{ 'https://cdn.shopify.com/s/files/1/0596/6440/0575/files/Geometria-ExtraBold.woff?v=1667413591' | file_url }}) format("woff");
+      }
+  
+      @font-face {
+          font-family: "Geometria-Regular";
+          src: url({{ 'https://cdn.shopify.com/s/files/1/0596/6440/0575/files/Geometria-Medium.woff?v=1667413592' | file_url }}) format("woff");
+      }
+  
+      @font-face {
+          font-family: "Geometria";
+          src: url({{ 'https://cdn.shopify.com/s/files/1/0596/6440/0575/files/Geometria.woff?v=1667413592' | file_url }}) format("woff");
+      }
+    </style>
+
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'swiper.js' | asset_url }}"></script>
     {{ content_for_header }}
@@ -216,7 +238,7 @@
         }
       }
     {% endstyle %}
-    {{ 'custom-font.css.liquid' | asset_url | stylesheet_tag }}
+
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'swiper.css' | asset_url | stylesheet_tag }}
     {{ 'maze-search.css' | asset_url | stylesheet_tag }}
