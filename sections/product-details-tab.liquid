@@ -59,6 +59,7 @@
 
     tabLists.forEach(list => list.addEventListener("click", e => {
       let index = e.target.dataset.index
+      console.log(e.target)
       detailsHandle(index)
     }))
 
