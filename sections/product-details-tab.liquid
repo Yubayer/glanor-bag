@@ -21,7 +21,11 @@
     display: none;
   }
 
-  .active-tag-details{
+  .active-tab-list{
+    border-bottom: 1px solid black;
+  }
+
+  .active-tab-details{
     display: block;
   }
 </style>
@@ -41,7 +45,7 @@
         </div>
       </div>
       <div class="tab-details-wrapper">
-        <div class="tab-details active-tag-details" data-index="1">
+        <div class="tab-details active-tab-details" data-index="1">
           Lorem ipsum dollar 1
         </div>
         <div class="tab-details" data-index="2">
@@ -65,11 +69,18 @@
     }))
 
     function detailsHandle(index){
-      console.log(index)
       tabDetails.forEach(detail => {
         let i = detail.dataset.index
-        if(i === index) detail.classList.add("active-tag-details")
-        else detail.classList.remove("active-tag-details")
+        if(i === index) detail.classList.add("active-tab-details")
+        else detail.classList.remove("active-tab-details")
+      })
+    }
+
+    function listHandle(index){
+      tabLists.forEach(list => {
+        let i = list.dataset.index
+        if(i === index) list.classList.add("active-tab-list")
+        else list.classList.remove("active-tab-list")
       })
     }
   </script>
