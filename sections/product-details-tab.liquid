@@ -30,6 +30,34 @@
   .active-tab-details{
     display: block;
   }
+
+  .td-ul{
+    list-style-type: none;
+  }
+
+  .td-li{}
+
+  .td-image{
+    height: 22px;
+  }
+
+  .td-title{
+    display: block;
+    font-size: 14px;
+    color: #595959;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-top: 10px;
+  }
+
+  .td-text{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: -.5px;
+    line-height: 19px;
+  }
 </style>
 
 <div class="pd-section">
@@ -54,22 +82,19 @@
           Product Reviews
         </div>
         <div class="tab-details" data-index="3">
-          <ul>
-            <li>
-              <img src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
-              <p>Dimension</p>
-              <p>{{ product.metafields.custom.dimension }}</p>
+          <ul class="td-ul">
+            <li class="td-li">
+              <img class="td-image" src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
+              <p class="td-title">Dimension</p>
+              <p class="td-text">{{ product.metafields.custom.dimension }}</p>
             </li>
-            <li>
-              <img src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
-              <p>Dimension</p>
-              <p>{{ product.metafields.custom.dimension }}</p>
+            
+            <li class="td-list">
+              <img class="td-image" src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
+              <p class="td-title">Dimension</p>
+              <p class="td-text">{{ product.metafields.custom.dimension }}</p>
             </li>
-            <li>
-              <img src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
-              <p>Dimension</p>
-              <p>{{ product.metafields.custom.dimension }}</p>
-            </li>
+            
           </ul>
         </div>
       </div>
