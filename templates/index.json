@@ -228,6 +228,7 @@
     },
     "94539076-83ce-495c-a3df-1e0146334d9b": {
       "type": "maze-image-card-block",
+      "disabled": true,
       "blocks": {
         "226cea6c-8fbd-4d73-b20d-071c274a79ba": {
           "type": "card",
@@ -285,6 +286,7 @@
     },
     "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f": {
       "type": "maze-image-card-block",
+      "disabled": true,
       "blocks": {
         "0d6de889-a4a9-4a2e-b0c3-fdbb000c6216": {
           "type": "card",
