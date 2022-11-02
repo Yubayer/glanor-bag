@@ -64,7 +64,7 @@
         "50949f5e-1f84-4b3e-9420-c68eb39bf40f"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "slider_mt": 0,
         "slider_mb": 29,
         "slider_height": 460,
@@ -345,7 +345,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
