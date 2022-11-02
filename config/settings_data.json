@@ -231,18 +231,11 @@
             "settings": {
               "footer-menu": "customer-support"
             }
-          },
-          "fab10293-de91-4401-bce5-1c9bbeb8c9c9": {
-            "type": "footer-menu",
-            "settings": {
-              "footer-menu": "useful-links"
-            }
           }
         },
         "block_order": [
           "60baee1f-a3e2-40d7-a5a6-6f8d32c089b5",
-          "6072129f-ce4b-476e-ae4b-ed4f1d27d25b",
-          "fab10293-de91-4401-bce5-1c9bbeb8c9c9"
+          "6072129f-ce4b-476e-ae4b-ed4f1d27d25b"
         ],
         "settings": {
         }
