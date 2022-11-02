@@ -28,30 +28,48 @@
   <div class="page-width">
     <div class="pd-wrapper">
       <div class="tab-list-wrapper">
-        <div class="tab-list">
+        <div class="tab-list" data-index="1">
           <p>Details</p>
         </div>
-        <div class="tab-list">
+        <div class="tab-list" data-index="2">
           <p>Reviews</p>
         </div>
-        <div class="tab-list">
+        <div class="tab-list" data-index="3">
           <p>Specs</p>
         </div>
       </div>
       <div class="tab-details-wrapper">
-        <div class="tab-details active-tag-details">
+        <div class="tab-details active-tag-details" data-index="1">
           Lorem ipsum dollar 1
         </div>
-        <div class="tab-details">
+        <div class="tab-details" data-index="2">
           Lorem ipsum dollar 2
         </div>
-        <div class="tab-details">
+        <div class="tab-details" data-index="3">
           Lorem ipsum dollar 3
         </div>
       </div>
     </div>
   </div>
 </div>
+
+  <script>
+    let tabLists = document.querySelectorAll(".tab-list")
+    let tabDetails = document.querySelectorAll(".tab-details")
+
+    tabLists.forEach(list => list.addEventLisener("click", e => {
+      let index = e.target.dataset.index
+      detailsHandle(index)
+    }))
+
+    function detailsHandle(index){
+      tabDetails.forEach(detail => {
+        let i = detail.dataset.index
+        if(i === index) detail.classList.add("active-tag-details")
+        else) detail.classList.remove("active-tag-details")
+      })
+    }
+  </script>
 
 
 {% schema %}
