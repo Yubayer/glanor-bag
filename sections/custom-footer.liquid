@@ -209,6 +209,13 @@
   <div class="custom-footer-wrapper">
     <div class="custom-footer-top">
       <div class="custom-footer-top-wrapper">
+        <div class="customer-footer-left">
+          <div class="customer-footer-left-wrapper">
+            <div class="custom-footer-logo">
+              <img src="{{ section.settings.footer_logo | img_url: 'master' }}" alt="Footer Logo">
+            </div>
+          </div>
+        </div>
         <div class="custom-footer-middle">
           <div class="custom-footer-middle-wrapper">
             <div class="custom-footer-menu">
@@ -327,7 +334,11 @@
 {
   "name": "Custom Footer",
   "settings": [
-
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    }
   ],
   "blocks": [
      {
