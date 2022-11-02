@@ -58,8 +58,7 @@
     let tabDetails = document.querySelectorAll(".tab-details")
 
     tabLists.forEach(list => list.addEventListener("click", e => {
-      let index = e.target.dataset.index
-      console.log(e.target)
+      let index = e.currentTarget.dataset.index
       detailsHandle(index)
     }))
 
