@@ -214,6 +214,11 @@
             <div class="custom-footer-logo">
               <img src="{{ section.settings.footer_logo | img_url: 'master' }}" alt="Footer Logo">
             </div>
+            <div class="social-icons">
+              {% render 'social-icons', name: 'facebook' %}
+              {% render 'social-icons', name: 'instagram' %}
+              {% render 'social-icons', name: 'email' %}
+            </div>
           </div>
         </div>
         <div class="custom-footer-middle">
