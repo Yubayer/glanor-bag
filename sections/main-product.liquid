@@ -365,7 +365,7 @@
             {%- when 'description' -%}
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden">
-                  {{ product.description | truncate: 100 }}
+                  {{ product.description | truncate: 120 }}
                 </div>
               {%- endif -%}
             {%- when 'custom_liquid' -%}
