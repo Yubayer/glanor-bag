@@ -212,7 +212,9 @@
         <div class="customer-footer-left">
           <div class="customer-footer-left-wrapper">
             <div class="custom-footer-logo">
-              <img src="{{ section.settings.footer_logo | img_url: 'master' }}" alt="Footer Logo">
+              {% if section.settings.footer_logo %}
+                <img src="{{ section.settings.footer_logo | img_url: 'master' }}" alt="Footer Logo">
+              {% endif %}
             </div>
             <div class="social-icons">
               {% render 'social-icons', name: 'facebook' %}
