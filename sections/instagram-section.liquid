@@ -1,12 +1,115 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+  .instagram-section--{{ section.id }}{
+    background-color: #FCF9F9;
+    margin: 60px 0 0 0;
   }
+  .insta-wrapper{
+    padding: 50px 80px 82px 100px;
+  }
+  .insta-header{
+    text-align: center;
+    padding-bottom: 28px;
+  }
+  .insta-header h2{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #060606;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .insta-icon{
+    margin-left: 10px;
+  }
+  .insta-header svg{
+    width: 32px;
+    height: 32px;
+  }
+  .insta-header p{
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    color: #060606;
+    text-transform: uppercase;
+  }
+  .insta-image{
+    cursor: pointer;
+  }
+  .insta-image-container {
+    display: flex;
+    gap: 15px;
+  }
+  .instage-image-box {
+    flex-basis: 25%;
+  }
+  .instage-image-box img{
+    width: 100%
+  }
+
+  .instage-image-box:nth-child(5){
+    display: none;
+  }
+
+  @media(min-width: 1921px){
+    .instage-image-box:nth-child(5){
+      display: block;
+    }
+  }
+</style>
+<section class="instagram-section--{{ section.id }}">
+  <div class="insta-wrapper">
+    <div class="insta-header">
+      <h2><span>AS SEEN ON IG</span><span class="insta-icon">{% render 'instagram' %}</span></h2>
+      <p>@VRUSSOSTORE</p>
+    </div>
+    <div class="insta-image">
+      <a href="{{ section.settings.collection_link }}">
+      <div class="insta-image-container">
+        {% for block in section.blocks %}
+            {% if block.type == 'photos' %}
+                <div class="instage-image-box">
+                  {% if block.settings.image %}
+                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="insta">
+                  {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Instagram",
+  "settings": [
+    {
+      "type": "url",
+      "id": "collection_link",
+      "label": "Collection link"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Instagram Photos",
+       "type": "photos",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Instagram"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
