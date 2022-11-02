@@ -313,6 +313,12 @@
 .image-with-text__heading {
   word-break: break-word;
   margin-bottom: 0;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
 }
 
 .image-with-text__text p {
