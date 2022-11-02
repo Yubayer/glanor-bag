@@ -358,6 +358,11 @@
       "settings": {
         "collection_link": ""
       }
+    },
+    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a": {
+      "type": "our-promise",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -368,6 +373,7 @@
     "featured_collection",
     "94539076-83ce-495c-a3df-1e0146334d9b",
     "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f",
-    "509d2120-b684-4b11-969b-996286582395"
+    "509d2120-b684-4b11-969b-996286582395",
+    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a"
   ]
 }
