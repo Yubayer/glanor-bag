@@ -365,6 +365,50 @@
       "type": "our-promise",
       "settings": {
       }
+    },
+    "f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Glanor is a retailer of high-quality leather and canvas bags at affordable prices. Starting in 2021, Glanor has quickly become a favorite for those looking for a bag that will last a lifetime. With a vast collection of all types of handbags, we have something for everyone. Our commitment to quality and affordability makes us the perfect choice for anyone looking for their next bag.<br\/><\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-0",
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-1",
+        "template--15891589562559__f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c-16673997805fd1cd77-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Sub-5_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -376,6 +420,7 @@
     "94539076-83ce-495c-a3df-1e0146334d9b",
     "a7dcbe73-d506-48ec-8de4-6fd082bfbe0f",
     "509d2120-b684-4b11-969b-996286582395",
-    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a"
+    "5fd9c762-1e5f-4c16-9ec6-7933d8d6448a",
+    "f17dbbd7-4f2c-4f44-a6bb-7962381b5a5c"
   ]
 }
