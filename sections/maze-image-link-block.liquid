@@ -70,6 +70,9 @@
 </style>
 
 <div class="maze-image-block">
+  <div class="maze-image-block-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
   <div class="image-link-wrapper">
     {% for block in section.blocks %}
       <div class="image-link-content">
@@ -85,7 +88,14 @@
 {% schema %}
   {
     "name": "Maze Image Link Block",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+
+    ],
     "blocks": [
       {
         "type": "image",
