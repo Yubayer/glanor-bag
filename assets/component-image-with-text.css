@@ -325,6 +325,12 @@
   word-break: break-word;
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
 }
 
 /* check for flexbox gap in older Safari versions */
