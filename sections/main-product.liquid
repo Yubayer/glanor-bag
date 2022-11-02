@@ -19,6 +19,10 @@
   .btn-price{
     font-size: 14px;
   }
+
+  .p-btn-title{
+    font-weight: 700;
+  }
 </style>
 
 <section
@@ -639,7 +643,7 @@
                           disabled
                         {% endif %}
                       >
-                        <span>
+                        <span class="p-btn-title">
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
                           {%- else -%}
