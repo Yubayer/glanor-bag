@@ -1,0 +1,91 @@
+<style>
+  .our-promise--{{ section.id }} *{
+    box-sizing: border-box;
+  }
+  .our-promise--{{ section.id }}{
+    background-color: #FAE9E9;
+  }
+  .our-promise-wrapper {
+    display: flex;
+    justify-content: stretch;
+    padding: 15px 278px 15px 280px;
+    gap: 220px;
+  }
+  .promise-box {
+    display: flex;
+    align-items: center;
+/*     margin: 0 220px 0 0; */
+    gap: 15px;
+  }
+  .our-promise-wrapper .promise-box:last-child{
+    margin: 0;
+  }
+  .promise-text p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.36px;
+    color: #27272B;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: 2200px){
+    .our-promise-wrapper {
+        justify-content: flex-start;
+        gap: 445px;
+    }
+  }
+  @media screen and (max-width: 1866px){
+    .our-promise-wrapper {
+      padding: 15px 118px 15px 178px;
+      gap: 90px;
+      justify-content: flex-start;
+
+    }
+  }
+</style>
+<section class="our-promise--{{ section.id }}">
+  <div class="our-promise-wrapper">
+    
+    <div class="promise-box">
+      <div class="promise-icon">
+        {% render 'promise-icon', name: 'car' %}
+      </div>
+      <div class="promise-text">
+        <p>FREE DELIVERY ON ORDERS OVER $75</p>
+      </div>
+    </div>
+
+    <div class="promise-box">
+      <div class="promise-icon">
+        {% render 'promise-icon', name: 'scale' %}
+      </div>
+      <div class="promise-text">
+        <p>SIZE CHART</p>
+      </div>
+    </div>
+
+    <div class="promise-box">
+      <div class="promise-icon">
+        {% render 'promise-icon', name: 'email' %}
+      </div>
+      <div class="promise-text">
+        <p>CUSTOMER SUPPORT</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Our Promise",
+  "settings": [
+
+  ],
+
+  "presets": [
+    {
+      "name": "Our Promise"
+    }
+  ]
+}
+{% endschema %}
