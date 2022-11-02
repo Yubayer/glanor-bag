@@ -114,6 +114,7 @@
     },
     "rich_text": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -144,6 +145,7 @@
     },
     "5edd084f-a486-4324-8a52-03bcdf96cfaf": {
       "type": "maze-image-card-block",
+      "disabled": true,
       "blocks": {
         "b5bfd6c1-fccd-4638-9039-5f1c158b48d4": {
           "type": "card",
