@@ -63,6 +63,7 @@
     }))
 
     function detailsHandle(index){
+      console.log(index)
       tabDetails.forEach(detail => {
         let i = detail.dataset.index
         if(i === index) detail.classList.add("active-tag-details")
