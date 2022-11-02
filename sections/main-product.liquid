@@ -15,6 +15,10 @@
     background: transparent;
     color: black;
   }
+
+  .btn-price{
+    font-size: 14px;
+  }
 </style>
 
 <section
@@ -642,7 +646,7 @@
                             {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
                         </span>
-                        <span>{{ product.variants[0].price | money }}</span>
+                        <span class="btn-price">{{ product.variants[0].price | money }}</span>
                         <div class="loading-overlay__spinner hidden">
                           <svg
                             aria-hidden="true"
