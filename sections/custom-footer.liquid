@@ -228,9 +228,9 @@
               {% for block in section.blocks %}
                 {% if block.type == "footer-menu" %}
                   <div class="custom-footer-menu-wrapper">
-                    <div class="menu-name">
-                      <h6>{{ block.settings.footer-menu.title }} </h6>{% render 'down-arrow' %}
-                    </div>
+                    
+                      <h6>{{ block.settings.footer-menu.title }} </h6>
+                    
                     <div class="footer-menu-items">
                       {% for link in block.settings.footer-menu.links %}
                       	<a href="{{ link.url }}">{{ link.title }}</a>
@@ -314,9 +314,9 @@
             </div>
             <div class="footer-address">
               <div class="form-address-wrapper">
-                <div class="menu-name">
-                  <h6>Directions & Hours</h6>{% render 'down-arrow' %}
-                </div>
+                
+                  <h6>Directions & Hours</h6>
+                
                 <div class="form-address-inner">
                    <p>Come by and see us <br>Monday - Saturday from&nbsp;8a - 6p.</p><p></p><p><strong>3001 West I-20<br>Weatherford, TX 76087<br></strong><a href="tel:8889552955" title="tel:8889552955"><strong>888.955.2955</strong></a></p><p></p><p>Cafe Hours: <br>Tuesday - Saturday 7:30a - 3p.</p>
                 </div>
