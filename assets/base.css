@@ -2969,18 +2969,18 @@ details-disclosure > details {
 
 
 @font-face {
-    font-family: "Geometria-Bold";
-    src: url({{ "GEOMETRIA-BOLD.woff2" | asset_url }}) format("woff2");
+    font-family: "Poppins-Bold";
+    src: url({{ "Poppins-Bold.woff" | asset_url }}) format("woff");
 }
 
 @font-face {
-    font-family: "Geometria-Medium";
-    src: url({{ "GEOMETRIA-MEDIUM.woff2" | asset_url }}) format("woff2");
+    font-family: "Poppins-Medium";
+    src: url({{ "Poppins-Medium.woff" | asset_url }}) format("woff");
 }
 
 @font-face {
-      font-family: "Geometria";
-      src: url({{ "GEOMETRIA.woff2" | asset_url }}) format("woff2");
+      font-family: "Poppins-Regular";
+      src: url({{ "Poppins-Regular.woff" | asset_url }}) format("woff");
 }
 
 
