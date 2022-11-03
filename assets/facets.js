@@ -35,8 +35,6 @@ class FacetFiltersForm extends HTMLElement {
             document.getElementById("Filter-Price-LTE").value = rangeSliders[1].value
         } 
     }))
-
-    FacetFiltersForm.clrSwatchList()
   }
 
   static clrSwatchList(){
@@ -126,6 +124,7 @@ class FacetFiltersForm extends HTMLElement {
 
   static renderProductGridContainer(html) {
     FacetFiltersForm.hadnlePriceRangeEvent()
+    FacetFiltersForm.clrSwatchList()
     document.getElementById('ProductGridContainer').innerHTML = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductGridContainer').innerHTML;
   }
 
