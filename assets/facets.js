@@ -14,7 +14,6 @@ class FacetFiltersForm extends HTMLElement {
     if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
 
     FacetFiltersForm.hadnlePriceRangeEvent()
-    // FacetFiltersForm.clrSwatchList()
   }
 
   static hadnlePriceRangeEvent() {
