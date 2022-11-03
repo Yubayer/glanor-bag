@@ -153,10 +153,10 @@
 
 .child-wrapper>ul {
     column-gap: 145px;
-    row-gap: 20px;
+    row-gap: 12px;
     list-style-type: none;
     justify-content: center;
-    max-height: 260px;
+    max-height: 270px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
