@@ -170,7 +170,7 @@
     <div class="rander-slider-values">
 <!--         <input data-slider="min" min="0" max="{{ max_priceAmount }}" value="{{ minValue }}" type="number" class="min-input" readonly>
         <input data-slider="max" min="0" max="{{ max_priceAmount }}" value="{{ maxValue }}" type="number" class="min-input" readonly> -->
-      <p data-slider="min">{{ 0 | money_without_trailing_zeros }}-{{ minValue | money }}</p>
+      <p data-slider="min">{{ 0 | money_without_trailing_zeros | replace: 0 , '' }}-{{ minValue | money }}</p>
       <p data-slider="max">{{ maxValue | money }}</p>
     </div>
     <div class="range-slider-container">
