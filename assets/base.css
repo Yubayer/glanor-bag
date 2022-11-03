@@ -2983,6 +2983,4 @@ details-disclosure > details {
       src: url({{ "Poppins-Regular.woff" | asset_url }}) format("woff");
 }
 
-p,h2,h6{
-  font-family: 'Poppins Regular' !important;
-}
+
