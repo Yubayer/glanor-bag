@@ -34,16 +34,6 @@
   .product__title h1{
     font-size: 
   }
-
-  .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 55% !important;
-    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2) !important;
-  }
-
-  .product--large:not(.product--no-media) .product__info-wrapper {
-    max-width: 45% !important;
-    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2) !important;
-  }
 </style>
 
 <style>
@@ -78,6 +68,20 @@
 
   slider-component#GalleryViewer-template--15891589923007__main {
     width: 82%;
+  }
+
+  .product.product--large.grid {
+    justify-content: space-between;
+  }
+
+  .product--large:not(.product--no-media) .product__media-wrapper {
+    max-width: 55% !important;
+    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
+
+  .product--large:not(.product--no-media) .product__info-wrapper {
+    max-width: 41% !important;
+    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2) !important;
   }
 }
 </style>
