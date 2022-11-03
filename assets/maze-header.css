@@ -155,7 +155,7 @@
   justify-self: start;
 }
 
-.child-wrapper>ul {
+.maze-header .child-wrapper>ul {
     column-gap: 145px;
     row-gap: 12px;
     list-style-type: none;
