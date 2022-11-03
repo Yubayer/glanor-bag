@@ -40,11 +40,12 @@ class FacetFiltersForm extends HTMLElement {
     console.log("color swatch")
     setTimeout(() => {
       document.querySelectorAll('.list-menu__item').forEach(list => list.addEventListener('click', e => {
-        console.log("list---", list)
         if(list.classList.contains('active-clr-swatch')){
           list.classList.remove('active-clr-swatch')   
+          return
         } else {
           list.classList.add('active-clr-swatch')
+          return
         }
       }))
     }, 1000)
