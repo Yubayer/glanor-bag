@@ -157,6 +157,15 @@
   </div>
 </div>
 
+  <script>
+    document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
+      if(list.classList.contains('active-clr-swatch')){
+        list.classList.remove('active-clr-swatch')   
+      } else {
+        list.classList.add('active-clr-swatch')
+      }
+    }))
+  </script>
 
 {% schema %}
 {
