@@ -150,8 +150,26 @@
     "templates": ["product"],
     "settings": [],
     "blocks": [
-      {
+     {
         "type": "@app"
+      },
+      {
+        "type": "metafield",
+        "name": "metafield",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Zipper"
+          },
+          {
+            "type": "liquid",
+            "id": "definition",
+            "label": "Product Metafield Definition",
+            "default": "{{ product.metafields.custom.zipper }}"
+          }
+        ]
       }
     ],
     "presets": [
@@ -161,5 +179,7 @@
     ]
   }
 {% endschema %}
+
+
 
 
