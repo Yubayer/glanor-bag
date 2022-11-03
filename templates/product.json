@@ -150,10 +150,38 @@
           "settings": {
             "definition": "{{ product.metafields.custom.zipper }}"
           }
+        },
+        "d9b8524d-4273-4e62-af16-b57e831e65fa": {
+          "type": "metafield",
+          "settings": {
+            "definition": "{{ product.metafields.custom.dimension }}"
+          }
+        },
+        "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded": {
+          "type": "metafield",
+          "settings": {
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "c8893425-a246-48ec-8cbf-898d9ff8274d": {
+          "type": "metafield",
+          "settings": {
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "d6c97abf-5339-4423-a81b-a2f4f8365595": {
+          "type": "metafield",
+          "settings": {
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
         }
       },
       "block_order": [
-        "7f53e45a-6c93-4d2f-9912-c163d79371fa"
+        "7f53e45a-6c93-4d2f-9912-c163d79371fa",
+        "d9b8524d-4273-4e62-af16-b57e831e65fa",
+        "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded",
+        "c8893425-a246-48ec-8cbf-898d9ff8274d",
+        "d6c97abf-5339-4423-a81b-a2f4f8365595"
       ],
       "settings": {
       }
