@@ -144,6 +144,17 @@
     },
     "bdb55a88-e364-4b47-9bb7-c4dffc20730d": {
       "type": "product-details-tab",
+      "blocks": {
+        "7f53e45a-6c93-4d2f-9912-c163d79371fa": {
+          "type": "metafield",
+          "settings": {
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        }
+      },
+      "block_order": [
+        "7f53e45a-6c93-4d2f-9912-c163d79371fa"
+      ],
       "settings": {
       }
     },
