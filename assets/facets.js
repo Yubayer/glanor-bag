@@ -47,7 +47,7 @@ class FacetFiltersForm extends HTMLElement {
           list.classList.add('active-clr-swatch')
         }
       }))
-    }, 200)
+    }, 1000)
   }
 
 
