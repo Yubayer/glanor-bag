@@ -394,9 +394,14 @@
 .mh2-c-menu-li {
   font-size: 15px;
 }
-
+.mh2-dp-search{
+  position: relative;
+}
 .mh2-search-icon {
   display: block;
+  position: absolute;
+  right: 20px;
+  top: 9px;
 }
 
 @media(max-width: 480px) {
