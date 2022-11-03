@@ -125,6 +125,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  justify-content: flex-start;
   gap: 30px;
 }
 
