@@ -23,7 +23,9 @@
                   {% endcomment %}
                   <div class="mh2-ct-logo">
                     {% comment %}<h1>SHOP LOGO</h1>{% endcomment %}
-                    <img src="{{ section.settings.header_logo | img_url: 'master' }}" alt="Header Logo">
+                    {% if  section.settings.header_logo %}
+                      <img src="{{ section.settings.header_logo | img_url: 'master' }}" alt="Header Logo">
+                    {% endif %}
                   </div>
                   <div class="mh2-ct-search">
                     <div class="mh2-dp-search">
