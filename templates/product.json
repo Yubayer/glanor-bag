@@ -169,8 +169,8 @@
         "c8893425-a246-48ec-8cbf-898d9ff8274d": {
           "type": "metafield",
           "settings": {
-            "title": "Zipper",
-            "definition": "{{ product.metafields.custom.zipper }}"
+            "title": "Compartments",
+            "definition": "{{ product.metafields.custom.zipperproduct.metafields.custom.compartments }}"
           }
         },
         "d6c97abf-5339-4423-a81b-a2f4f8365595": {
