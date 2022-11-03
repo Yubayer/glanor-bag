@@ -19,7 +19,7 @@
           "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/average-rating\/a640696f-4b9b-444c-80c4-34bc44e213ba",
           "settings": {
             "stars_fill_color": "#fadb14",
-            "star_size": 18,
+            "star_size": 16,
             "space_between": 10,
             "block_margin_left": 0,
             "block_margin_right": 0
