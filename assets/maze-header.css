@@ -367,7 +367,9 @@
   position: relative;
   flex-basis: 80%;
 }
-
+.mh2-icons {
+  flex-basis: 20%;
+}
 .mh2-dp-search>input {
   width: 100%;
   font-family: Crimson Text, serif;
