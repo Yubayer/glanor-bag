@@ -346,6 +346,9 @@
 }
 
 @media screen and (max-width: 480px){
+  .image-with-text{
+    text-align: center !important;
+  }
   .image-with-text__content {
     align-items: center;
   }
