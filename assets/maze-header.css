@@ -91,12 +91,14 @@
 }
 
 .maze-header ul.parent-items-x {
-  display: flex;
-  list-style-type: none;
-  gap: 55px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-left: -4rem;
+    display: flex;
+    list-style-type: none;
+    gap: 55px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: revert;
+    margin-left: -4rem;
+    padding: inherit;
 }
 
 .parent-item-x>a,
