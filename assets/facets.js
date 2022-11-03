@@ -22,7 +22,7 @@ class FacetFiltersForm extends HTMLElement {
     let rangeSliders = document.querySelectorAll('.range-slider-container input')
     let sliderMaxValue = rangeSliders[1].max;
     // let rangeInputs = document.querySelectorAll('.rander-slider-values input[type=number]')
-    let rangeInputs = document.querySelectorAll('.rander-slider-values p')
+    let rangeInputs = document.querySelectorAll('.rander-slider-values p span')
 
     rangeSliders.forEach((input, index) => input.addEventListener('input', e => {
         rangeInputs[index].innerHTML = input.value
