@@ -343,7 +343,7 @@ li.child-item-x {
   display: grid;
   grid-template-columns: 3fr 2fr;
   box-sizing: border-box;
-  padding: 35px 10px;
+  padding: 25px 10px;
 }
 
 .mh2-ct-search,
