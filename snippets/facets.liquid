@@ -582,10 +582,10 @@
                         {% render 'price-range', filter: filter %}
 
                           {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
-                          <p class="mobile-facets__info">{{ "products.facets.max_price" | t: price: max_price_amount }}
+                          <p class="mobile-facets__info price-filter-mobile">{{ "products.facets.max_price" | t: price: max_price_amount }}
                           </p>
 
-                          <price-range class="facets__price">
+                          <price-range class="facets__price price-filter-mobile">
                             <span class="field-currency">{{ cart.currency.symbol }}
                             </span>
                             <div class="field">
