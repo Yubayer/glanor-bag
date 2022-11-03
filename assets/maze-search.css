@@ -249,6 +249,7 @@ ul.msf-ul > li{
 
 .dp-search-container {
     width: var(--mas-width);
+    width: 100%;
     height: var(--msd-height);
     background-color: var(--msd-bg);
     position: absolute;
