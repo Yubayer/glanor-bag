@@ -237,6 +237,7 @@ ul.msf-ul > li{
   --msd-bg: #a8fffb;
   --msd-height: 500px;
   --mas-width: 600px;
+  --mas-width: 578px;
 }
 
 @media(max-width: 480px){
