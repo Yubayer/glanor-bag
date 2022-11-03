@@ -2982,5 +2982,8 @@ details-disclosure > details {
     font-family: "Geometria";
     src: url({{ "Geometria.woff" | asset_url }}) format("woff");
 }
+p{
+  font-family: 'Geometria-Bold' !important;
+}
 
 
