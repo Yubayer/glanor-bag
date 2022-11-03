@@ -339,7 +339,7 @@ li.child-item-x {
 
 .menu-content-top {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   box-sizing: border-box;
   padding: 35px 10px;
 }
