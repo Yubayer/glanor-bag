@@ -785,10 +785,12 @@ slider-component#GalleryViewer-template--15891589923007__main {width: 85%;}
 
               {% when 'icon' %}
                 <div class="payments desktop">
-                    <div class="label">
+                    <div class="pi-label">
                         Securely Use:
                     </div>
-                    <i class="icon-visa"></i><i class="icon-master"></i><i class="icon-american"></i><i class="icon-pal"></i><!-- <span class="affirm">Starting at $5.44/mo with<i class="icon-affirm"></i></span> -->
+                    <div class="pi-image">
+                      <img src="{{ 'payment-icon.png' | asset_img_url: '150x18' }}">
+                    </div>
                 </div>
 
               {%- when 'complementary' -%}
