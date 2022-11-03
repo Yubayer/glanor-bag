@@ -179,8 +179,8 @@
   }
 
   .image-with-text__content--top {
-    justify-content: flex-start;
-    align-self: flex-start;
+/*     justify-content: flex-start;
+    align-self: flex-start; */
   }
 
   .image-with-text__content--desktop-right > * {
