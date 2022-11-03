@@ -7,7 +7,7 @@
   --nav-x-height: 100%;
 }
 .display-none{
-  display: none;
+  display: none !important;
 }
 .maze-header {
   padding: 0;
