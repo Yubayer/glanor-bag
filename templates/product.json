@@ -141,21 +141,10 @@
           "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/widgit\/a640696f-4b9b-444c-80c4-34bc44e213ba",
           "settings": {
           }
-        },
-        "e529654a-a372-4129-a60e-a5bf583f5d9f": {
-          "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/average-rating\/a640696f-4b9b-444c-80c4-34bc44e213ba",
-          "settings": {
-            "stars_fill_color": "#fadb14",
-            "star_size": 24,
-            "space_between": 10,
-            "block_margin_left": 0,
-            "block_margin_right": 0
-          }
         }
       },
       "block_order": [
-        "11066e5b-a983-4231-9016-4f9efc06b77a",
-        "e529654a-a372-4129-a60e-a5bf583f5d9f"
+        "11066e5b-a983-4231-9016-4f9efc06b77a"
       ],
       "settings": {
       }
