@@ -11,7 +11,7 @@
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
-    "type_header_font": "poppins_n6",
+    "type_header_font": "poppins_n4",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
     "body_scale": 100,
@@ -317,7 +317,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "11370594006410091499": {
+        "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/popup\/a640696f-4b9b-444c-80c4-34bc44e213ba",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
