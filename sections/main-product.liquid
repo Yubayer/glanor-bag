@@ -783,6 +783,14 @@ slider-component#GalleryViewer-template--15891589923007__main {width: 85%;}
                 </p>
               {%- endif -%}
 
+              {% when 'icon' %}
+                <div class="payments desktop">
+                    <div class="label">
+                        Securely Use:
+                    </div>
+                    <i class="icon-visa"></i><i class="icon-master"></i><i class="icon-american"></i><i class="icon-pal"></i><!-- <span class="affirm">Starting at $5.44/mo with<i class="icon-affirm"></i></span> -->
+                </div>
+
               {%- when 'complementary' -%}
                 <product-recommendations class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.product_list_limit }}&intent=complementary">
                   {%- if recommendations.performed and recommendations.products_count > 0 -%}
