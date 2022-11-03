@@ -29,7 +29,7 @@
 
 .menu-content {
   display: grid;
-  background-color: #333;
+  background: #000000;
   justify-content: start;
 }
 .mh2-ct-logo img{
