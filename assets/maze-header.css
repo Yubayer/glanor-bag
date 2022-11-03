@@ -90,7 +90,7 @@
     padding: 0 0 0 50px;
 }
 
-.parent-items-x {
+.maze-header ul.parent-items-x {
   display: flex;
   list-style-type: none;
   gap: 55px;
