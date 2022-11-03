@@ -306,6 +306,7 @@
           "c355873d-c6eb-4395-8e43-651c958d56cc"
         ],
         "settings": {
+          "header_logo": "shopify:\/\/shop_images\/Logo.png",
           "main-menu": "main-menu",
           "isLimitMenu": false,
           "showArrow": true,
