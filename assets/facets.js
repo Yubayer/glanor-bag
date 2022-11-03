@@ -34,6 +34,10 @@ class FacetFiltersForm extends HTMLElement {
             document.getElementById("Filter-Price-LTE").value = rangeSliders[1].value
         } 
     }))
+
+    document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
+      console.log(list)
+    }))
   }
 
 
