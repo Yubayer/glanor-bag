@@ -572,14 +572,14 @@
                             </noscript>
                           </div>
                         </summary>
-
-                      {% render 'price-range', filter: filter %}
                     
                         <div id="FacetMobile-{{ forloop.index }}-{{ section.id }}" class="mobile-facets__submenu gradient">
                           <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
                             {% render 'icon-arrow' %}
                             {{ filter.label | escape }}
                           </button>
+
+                        {% render 'price-range', filter: filter %}
 
                           {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                           <p class="mobile-facets__info">{{ "products.facets.max_price" | t: price: max_price_amount }}
