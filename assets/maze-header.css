@@ -151,20 +151,14 @@
 }
 
 .child-wrapper>ul {
-/*   display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  list-style-type: none;
-  justify-content: center; */
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  list-style-type: none;
-  justify-content: center;
-  max-height: 390px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 36px;
+    list-style-type: none;
+    justify-content: center;
+    max-height: 335px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 li.child-item-x {
   flex: 1 1 20px;
