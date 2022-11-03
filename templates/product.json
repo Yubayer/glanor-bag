@@ -141,10 +141,50 @@
           "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/widgit\/a640696f-4b9b-444c-80c4-34bc44e213ba",
           "settings": {
           }
+        },
+        "5db7c384-7bb5-435e-8375-520b27ed9289": {
+          "type": "metafield",
+          "settings": {
+            "title": "Zipper",
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "1ebd2e16-539c-4258-900f-adcf9dc45ee6": {
+          "type": "metafield",
+          "settings": {
+            "title": "Zipper",
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "6e6aeeb9-cc6c-48a1-83e8-7890eeac8235": {
+          "type": "metafield",
+          "settings": {
+            "title": "Zipper",
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "346a3bee-976d-4c55-90ab-c51804fd4c2a": {
+          "type": "metafield",
+          "settings": {
+            "title": "Zipper",
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
+        },
+        "eefac643-9c7b-4a54-9870-e1a660980b51": {
+          "type": "metafield",
+          "settings": {
+            "title": "Zipper",
+            "definition": "{{ product.metafields.custom.zipper }}"
+          }
         }
       },
       "block_order": [
-        "11066e5b-a983-4231-9016-4f9efc06b77a"
+        "11066e5b-a983-4231-9016-4f9efc06b77a",
+        "5db7c384-7bb5-435e-8375-520b27ed9289",
+        "1ebd2e16-539c-4258-900f-adcf9dc45ee6",
+        "6e6aeeb9-cc6c-48a1-83e8-7890eeac8235",
+        "346a3bee-976d-4c55-90ab-c51804fd4c2a",
+        "eefac643-9c7b-4a54-9870-e1a660980b51"
       ],
       "settings": {
       }
