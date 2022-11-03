@@ -176,8 +176,8 @@
         "d6c97abf-5339-4423-a81b-a2f4f8365595": {
           "type": "metafield",
           "settings": {
-            "title": "Zipper",
-            "definition": "{{ product.metafields.custom.zipper }}"
+            "title": "Strap",
+            "definition": "{{ product.metafields.custom.strap }}"
           }
         }
       },
