@@ -2964,3 +2964,23 @@ details-disclosure > details {
     max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
+
+
+
+
+@font-face {
+    font-family: "Geometria-Bold";
+    src: url("{{ 'Geometria-Bold.woff' | asset_url }}") format("[font-format]");
+}
+
+@font-face {
+    font-family: "Geometria-Medium";
+    src: url("{{ 'Geometria-Medium.woff' | asset_url }}") format("[font-format]");
+}
+
+@font-face {
+    font-family: "Geometria";
+    src: url("{{ 'Geometria.woff' | asset_url }}") format("[font-format]");
+}
+
+
