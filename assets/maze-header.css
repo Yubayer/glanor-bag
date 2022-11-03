@@ -6,7 +6,9 @@
 :root {
   --nav-x-height: 100%;
 }
-
+.display-none{
+  display: none;
+}
 .maze-header {
   padding: 0;
   margin: 0;
