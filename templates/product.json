@@ -94,6 +94,11 @@
           "type": "icon",
           "settings": {
           }
+        },
+        "d8ea8452-2f5b-4983-8b76-3fdea4da53f0": {
+          "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/widgit\/a640696f-4b9b-444c-80c4-34bc44e213ba",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -109,7 +114,8 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "9196f0b9-1fa0-48a1-9e79-6f906b0f69db"
+        "9196f0b9-1fa0-48a1-9e79-6f906b0f69db",
+        "d8ea8452-2f5b-4983-8b76-3fdea4da53f0"
       ],
       "settings": {
         "enable_sticky_info": true,
