@@ -150,11 +150,20 @@
 }
 
 .child-wrapper>ul {
+/*   display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  list-style-type: none;
+  justify-content: center; */
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
   list-style-type: none;
   justify-content: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .grand-child-items-x {
