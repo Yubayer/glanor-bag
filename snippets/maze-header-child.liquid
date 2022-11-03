@@ -1,6 +1,6 @@
 
 {% if link.links.size > 0 or section.blocks.size > 0 %}
-  <div class="child-wrapper">
+  <div class="child-wrapper {% if link.links == blank or section.blocks.size > 0 %} display-none {% endif %}">
       <ul class="child-items-x">
         {% for child_link in link.links %}
           <li class="child-item-x"><a href="{{ child_link.url }}">{{ child_link.title }}</a>
