@@ -93,28 +93,12 @@
 }
 {% endschema %}
 <script>
-var init = false;
-
-function swiperCard() {
-  if (window.innerWidth <= 768) {
-    if (!init) {
-      init = true;
-      swiper = new Swiper(".o-p-swiper", {
-        direction: "horizontal",
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 32,
+   var swiper = new Swiper(".o-p-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
+        }
       });
-    }
-  } else if (init) {
-    swiper.destroy();
-    init = false;
-  }
-}
-swiperCard();
-window.addEventListener("resize", swiperCard);
 </script>
