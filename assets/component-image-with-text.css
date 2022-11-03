@@ -345,6 +345,12 @@
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 480px){
+  .image-with-text__content {
+    justify-content: center;
+  }
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   .image-with-text .grid {
