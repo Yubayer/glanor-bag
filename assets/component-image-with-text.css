@@ -347,7 +347,7 @@
 
 @media screen and (max-width: 480px){
   .image-with-text__content {
-    justify-content: center;
+    align-items: center;
   }
 }
 
