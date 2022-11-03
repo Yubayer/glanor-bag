@@ -89,16 +89,23 @@
         </div>
         <div class="tab-details" data-index="2">
           Product Reviews
+           {% for block in section.blocks %}
+              {% if block.type == '@app' %}
+                
+              {% endif %}
+            {% endfor %}
         </div>
         <div class="tab-details" data-index="3">
           <ul class="td-ul">
             {% for block in section.blocks %}
-              {% if block.settings.definition != blank %}
-                <li class="td-li">
-                  <img class="td-image" src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
-                  <p class="td-title">{{ block.settings.title }}</p>
-                  <p class="td-text">{{ block.settings.definition }}</p>
-                </li>
+              {% if block.type == 'metafield' %}
+                {% if block.settings.definition != blank %}
+                  <li class="td-li">
+                    <img class="td-image" src="//cdn.shopify.com/s/files/1/0040/6015/1843/t/19/assets/material@2x.png?v=168077453053063857601644332533">
+                    <p class="td-title">{{ block.settings.title }}</p>
+                    <p class="td-text">{{ block.settings.definition }}</p>
+                  </li>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </ul>
