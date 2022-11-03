@@ -184,7 +184,14 @@
           "type": "metafield",
           "settings": {
             "title": "Made In Location",
-            "definition": "{{ product.metafields.custom.zipper }}"
+            "definition": "{{ product.metafields.custom.made_in_location }}"
+          }
+        },
+        "af811da8-cbdf-4a50-a425-19e93acad631": {
+          "type": "metafield",
+          "settings": {
+            "title": "Handbag Type",
+            "definition": "{{ product.metafields.custom.handbag_type }}"
           }
         }
       },
@@ -194,7 +201,8 @@
         "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded",
         "c8893425-a246-48ec-8cbf-898d9ff8274d",
         "d6c97abf-5339-4423-a81b-a2f4f8365595",
-        "6e8ca848-acbf-4763-b363-5f9b785a148f"
+        "6e8ca848-acbf-4763-b363-5f9b785a148f",
+        "af811da8-cbdf-4a50-a425-19e93acad631"
       ],
       "settings": {
       }
