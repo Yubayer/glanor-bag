@@ -44,7 +44,7 @@
     }
   } */
 </style>
-<section class="our-promise--{{ section.id }} swiper">
+<section class="our-promise--{{ section.id }} swiper o-p-swiper">
   <div class="our-promise-wrapper swiper-wrapper">
     
     <div class="promise-box swiper-slide">
@@ -90,3 +90,13 @@
   ]
 }
 {% endschema %}
+<script>
+   var swiper = new Swiper(".o-p-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+      });
+</script>
