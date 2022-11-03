@@ -216,6 +216,7 @@
                   </details>
                 {% when 'price_range' %}
                   {% liquid
+<<<<<<< HEAD
                            assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
                            assign uses_comma_decimals = false
                            if currencies_using_comma_decimals contains cart.currency.iso_code
@@ -223,6 +224,14 @@
                            endif
                          %}
 
+=======
+                    assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                    assign uses_comma_decimals = false
+                    if currencies_using_comma_decimals contains cart.currency.iso_code
+                      assign uses_comma_decimals = true
+                    endif
+                  %}
+>>>>>>> f54849b (another commit)
 
                   <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}" {% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
                     <summary class="facets__summary caption-large focus-offset">
