@@ -37,6 +37,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static clrSwatchList(){
+    console.log("color swatch")
     document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
       if(list.classList.contains('active-clr-swatch')){
         list.classList.remove('active-clr-swatch')   
