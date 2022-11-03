@@ -143,64 +143,14 @@
     "bdb55a88-e364-4b47-9bb7-c4dffc20730d": {
       "type": "product-details-tab",
       "blocks": {
-        "7f53e45a-6c93-4d2f-9912-c163d79371fa": {
-          "type": "metafield",
+        "11066e5b-a983-4231-9016-4f9efc06b77a": {
+          "type": "shopify:\/\/apps\/revyu-ai-powered-reviews\/blocks\/widgit\/a640696f-4b9b-444c-80c4-34bc44e213ba",
           "settings": {
-            "title": "Zipper",
-            "definition": "{{ product.metafields.custom.zipper }}"
-          }
-        },
-        "d9b8524d-4273-4e62-af16-b57e831e65fa": {
-          "type": "metafield",
-          "settings": {
-            "title": "Dimension",
-            "definition": "{{ product.metafields.custom.dimension }}"
-          }
-        },
-        "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded": {
-          "type": "metafield",
-          "settings": {
-            "title": "Leather Type",
-            "definition": "{{ product.metafields.custom.leather_description }}"
-          }
-        },
-        "c8893425-a246-48ec-8cbf-898d9ff8274d": {
-          "type": "metafield",
-          "settings": {
-            "title": "Compartments",
-            "definition": "{{ product.metafields.custom.zipperproduct.metafields.custom.compartments }}"
-          }
-        },
-        "d6c97abf-5339-4423-a81b-a2f4f8365595": {
-          "type": "metafield",
-          "settings": {
-            "title": "Strap",
-            "definition": "{{ product.metafields.custom.strap }}"
-          }
-        },
-        "6e8ca848-acbf-4763-b363-5f9b785a148f": {
-          "type": "metafield",
-          "settings": {
-            "title": "Made In Location",
-            "definition": "{{ product.metafields.custom.made_in_location }}"
-          }
-        },
-        "af811da8-cbdf-4a50-a425-19e93acad631": {
-          "type": "metafield",
-          "settings": {
-            "title": "Handbag Type",
-            "definition": "{{ product.metafields.custom.handbag_type }}"
           }
         }
       },
       "block_order": [
-        "7f53e45a-6c93-4d2f-9912-c163d79371fa",
-        "d9b8524d-4273-4e62-af16-b57e831e65fa",
-        "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded",
-        "c8893425-a246-48ec-8cbf-898d9ff8274d",
-        "d6c97abf-5339-4423-a81b-a2f4f8365595",
-        "6e8ca848-acbf-4763-b363-5f9b785a148f",
-        "af811da8-cbdf-4a50-a425-19e93acad631"
+        "11066e5b-a983-4231-9016-4f9efc06b77a"
       ],
       "settings": {
       }
