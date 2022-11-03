@@ -162,8 +162,8 @@
         "fa3c8484-ef6d-4b5a-845d-d3cd35a4dded": {
           "type": "metafield",
           "settings": {
-            "title": "Zipper",
-            "definition": "{{ product.metafields.custom.zipper }}"
+            "title": "Leather Type",
+            "definition": "{{ product.metafields.custom.leather_description }}"
           }
         },
         "c8893425-a246-48ec-8cbf-898d9ff8274d": {
