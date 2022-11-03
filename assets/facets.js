@@ -39,10 +39,10 @@ class FacetFiltersForm extends HTMLElement {
 
   static clrSwatchList(){
     document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
-      if(e.target.classList.contains('active-clr-swatch')){
-        e.target.classList.remove('active-clr-swatch')   
+      if(list.classList.contains('active-clr-swatch')){
+        list.classList.remove('active-clr-swatch')   
       } else {
-        e.target.classList.add('active-clr-swatch')
+        list.classList.add('active-clr-swatch')
       }
     }))
   }
