@@ -352,6 +352,10 @@
   .image-with-text__content {
     align-items: center;
   }
+  .image-with-text__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 /* check for flexbox gap in older Safari versions */
