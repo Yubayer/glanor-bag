@@ -331,7 +331,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
-  padding: 0 10px;
+  padding: 35px 10px;
 }
 
 .mh2-ct-search,
