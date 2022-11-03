@@ -2970,17 +2970,17 @@ details-disclosure > details {
 
 @font-face {
     font-family: "Geometria-Bold";
-    src: url("{{ 'Geometria-Bold.woff' | asset_url }}") format("[font-format]");
+    src: url("{{ 'Geometria-Bold.woff' | asset_url }}") format("woff");
 }
 
 @font-face {
     font-family: "Geometria-Medium";
-    src: url("{{ 'Geometria-Medium.woff' | asset_url }}") format("[font-format]");
+    src: url("{{ 'Geometria-Medium.woff' | asset_url }}") format("woff");
 }
 
 @font-face {
     font-family: "Geometria";
-    src: url("{{ 'Geometria.woff' | asset_url }}") format("[font-format]");
+    src: url("{{ 'Geometria.woff' | asset_url }}") format("woff");
 }
 
 
