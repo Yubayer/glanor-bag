@@ -38,14 +38,16 @@ class FacetFiltersForm extends HTMLElement {
 
   static clrSwatchList(){
     console.log("color swatch")
-    document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
-      console.log("list---", list)
-      if(list.classList.contains('active-clr-swatch')){
-        list.classList.remove('active-clr-swatch')   
-      } else {
-        list.classList.add('active-clr-swatch')
-      }
-    }))
+    setTimeout(() => {
+      document.querySelectorAll('.clr-swatch-list').forEach(list => list.addEventListener('click', e => {
+        console.log("list---", list)
+        if(list.classList.contains('active-clr-swatch')){
+          list.classList.remove('active-clr-swatch')   
+        } else {
+          list.classList.add('active-clr-swatch')
+        }
+      }))
+    }, 200)
   }
 
 
