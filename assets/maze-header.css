@@ -165,7 +165,9 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-
+li.child-item-x {
+  flex: 1 1 20px;
+}
 .grand-child-items-x {
   list-style-type: none;
 }
