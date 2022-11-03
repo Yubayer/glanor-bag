@@ -356,6 +356,10 @@
     font-size: 24px;
     line-height: 30px;
   }
+  .image-with-text__text p {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 /* check for flexbox gap in older Safari versions */
