@@ -382,6 +382,10 @@ li.child-item-x {
 .mh2-icons {
   flex-basis: 20%;
 }
+.mh2-user-icons{
+  display: flex;
+  align-items: center;
+}
 .mh2-user-icons svg{
   margin-left: 15px;
 }
