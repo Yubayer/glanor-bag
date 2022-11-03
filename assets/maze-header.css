@@ -364,7 +364,8 @@
 }
 
 .mh2-dp-search {
-  width: 100%;
+  position: relative;
+  flex-basis: 80%;
 }
 
 .mh2-dp-search>input {
