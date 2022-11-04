@@ -254,6 +254,7 @@ ul.msf-ul > li{
 /*     width: 100%; */
     height: var(--msd-height);
     background-color: var(--msd-bg);
+    background-color: #000;
     position: absolute;
     z-index: -99;
     opacity: 0;
