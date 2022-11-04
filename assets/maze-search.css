@@ -235,7 +235,7 @@ ul.msf-ul > li{
 /* --------------------------- Maze search container ---------------------- */
 
 :root{
-  --msd-bg: #a8fffb;
+  --msd-bg: #fff;
   --msd-height: 500px;
   --mas-width: 600px;
   --mas-width: 578px;
@@ -254,7 +254,6 @@ ul.msf-ul > li{
 /*     width: 100%; */
     height: var(--msd-height);
     background-color: var(--msd-bg);
-    background-color: #fff;
     position: absolute;
     z-index: -99;
     opacity: 0;
