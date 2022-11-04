@@ -1,7 +1,7 @@
 <style>
   .pd-section{}
 
-  .pd-wrapper{
+  .product-tab-custom .pd-wrapper{
     width: 60%;
     margin: auto;
     border-top: 1px solid gray;
@@ -10,57 +10,57 @@
   }
 
   @media(max-width: 480px){
-    .pd-wrapper{
+    .product-tab-custom .pd-wrapper{
       width: 100%;
     }
   }
 
-  .tab-list-wrapper {
+  .product-tab-custom .tab-list-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 4%;
     margin-bottom: 20px;
   }
 
-  .tab-list{
+  .product-tab-custom .tab-list{
     cursor: pointer;
     width: 100%;
   }
 
-  .tab-details-wrapper{}
+  .product-tab-custom .tab-details-wrapper{}
 
-  .tab-details{
+  .product-tab-custom .tab-details{
     display: none;
   }
 
-  .active-tab-list{
+  .product-tab-custom .active-tab-list{
     border-bottom: .5px solid gray;
     font-weight: 700;
     color: #000000;
   }
 
-  .active-tab-details{
+  .product-tab-custom .active-tab-details{
     display: block;
   }
 
-  .td-ul{
+  .product-tab-custom .td-ul{
     list-style-type: none;
     padding: 0;
   }
 
-  .td-li:not(:first-child) {
+  .product-tab-custom .td-li:not(:first-child) {
     margin-top: 15px;
   }
 
-  .td-li{
+  .product-tab-custom .td-li{
     border-bottom: 1px solid #C8C8C8;
   }
 
-  .td-image{
+  .product-tab-custom .td-image{
     height: 22px;
   }
 
-  .td-title{
+  .product-tab-custom .td-title{
     display: block;
     font-size: 14px;
     color: #595959;
@@ -69,7 +69,7 @@
     margin-top: 0px;
   }
 
-  .td-text{
+  .product-tab-custom .td-text{
     margin-top: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -79,7 +79,7 @@
   }
 </style>
 
-<div class="pd-section" id="descTag">
+<div class="product-tab-custom pd-section" id="descTag">
   <div class="page-width">
     <div class="pd-wrapper">
       <div class="tab-list-wrapper">
