@@ -110,6 +110,7 @@ ul.msf-ul {
   justify-content: space-between;
   margin: 0;
   margin-left: -4rem;
+  padding-left: 35px;
 }
 
 @media (max-width: 480px){
