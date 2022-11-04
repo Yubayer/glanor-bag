@@ -6,7 +6,7 @@
         "84087ada-60d8-48c7-a6f8-01af045c5c2a": {
           "type": "slider",
           "settings": {
-            "show_text_content": true,
+            "show_text_content": false,
             "title": "New & used saddless",
             "title_transform": "uppercase",
             "text": "",
