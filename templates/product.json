@@ -160,7 +160,7 @@
           "type": "metafield",
           "settings": {
             "title": "Handbag Type",
-            "definition": "{{ product.metafields.custom.zipper }}"
+            "definition": "{{ product.metafields.custom.handbag_type }}"
           }
         },
         "346a3bee-976d-4c55-90ab-c51804fd4c2a": {
