@@ -145,7 +145,7 @@
         "5db7c384-7bb5-435e-8375-520b27ed9289": {
           "type": "metafield",
           "settings": {
-            "title": "Zipper",
+            "title": "Dimension",
             "definition": "{{ product.metafields.custom.zipper }}"
           }
         },
