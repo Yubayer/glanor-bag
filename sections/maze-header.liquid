@@ -60,13 +60,11 @@
                 </div>
                 <div class="menu-content-mobile">
                   {% for link in section.settings.main-menu.links %}
-                    {{ link.title }}
+                    <details>
+                      <summary>{{ link.title }}</summary>
+                      <p>rnational</p>
+                    </details>
                   {% endfor %}
-                  <details>
-                    <summary>Epcot Center</summary>
-                    <p>rnational</p>
-                  </details>
-
                 </div>
             </div>
         </div>
