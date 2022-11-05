@@ -464,6 +464,10 @@ li.child-item-x {
     display: none;
   }
 
+    .mh2-dp-search{
+      flex-basis: inherit;
+    }
+
   .mh2-search-icon {
     display: block;
     position: inherit;
