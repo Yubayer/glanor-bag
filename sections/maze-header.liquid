@@ -59,22 +59,24 @@
                     </div>
                 </div>
                 <div class="menu-content-mobile">
-                  {% for link in section.settings.main-menu.links %}
-                    <details>
-                      <summary>{{ link.title }}</summary>
-                      {% if link.links != blank %}
-                        <div>
-                          <ul>
-                            {% for child_link in link.links %}
-                              <li>
-                                {{ child_link.title }}
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      {% endif %}
-                    </details>
-                  {% endfor %}
+                  <div class="mc-mobile-wrapper">
+                    {% for link in section.settings.main-menu.links %}
+                      <details>
+                        <summary>{{ link.title }}</summary>
+                        {% if link.links != blank %}
+                          <div>
+                            <ul>
+                              {% for child_link in link.links %}
+                                <li>
+                                  {{ child_link.title }}
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                        {% endif %}
+                      </details>
+                    {% endfor %}
+                  </div>
                 </div>
             </div>
         </div>
