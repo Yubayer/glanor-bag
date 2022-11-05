@@ -468,4 +468,8 @@ li.child-item-x {
     text-decoration: none;
   }
 
+  .mc-mobile-wrapper details {
+    border-bottom: 1px solid #D9D9D9;
+  }
+
 }
