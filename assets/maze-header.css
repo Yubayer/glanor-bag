@@ -491,4 +491,11 @@ li.child-item-x {
     line-height: 29px;
   }
 
+  .mc-active-child{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 10%;
+  }
+
 }
