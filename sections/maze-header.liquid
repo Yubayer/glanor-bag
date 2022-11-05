@@ -62,11 +62,17 @@
                   {% for link in section.settings.main-menu.links %}
                     <details>
                       <summary>{{ link.title }}</summary>
-                      <div>
-                        {% for child_link in link.links %}
-                          {{ child_link.title }}
-                        {% endfor %}
-                      </div>
+                      {% if link.links %}
+                        <div>
+                          <ul>
+                            {% for child_link in link.links %}
+                              <li>
+                                {{ child_link.title }}
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
                     </details>
                   {% endfor %}
                 </div>
