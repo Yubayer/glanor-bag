@@ -107,8 +107,11 @@
 {{ 'maze-header.js' | asset_url | script_tag }}
 
 <script>
-  document.querySelector(".header-burger-icon").addEventListener("click", e => {
-    e.target.style.display = 'none'
+  let closeIcon = document.querySelector(".header-close-icon")
+  let burgerIcon = document.querySelector(".header-burger-icon")
+  burgerIcon.addEventListener("click", e => {
+    burgerIcon.style.display = 'none'
+    closeIcon.style.display = 'block'
     document.querySelector(".menu-content-mobile").classList.add('active-mobile-menu')
   })
 </script>
