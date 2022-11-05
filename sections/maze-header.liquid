@@ -62,7 +62,15 @@
                   <div class="mc-mobile-wrapper">
                     {% for link in section.settings.main-menu.links %}
                       <details>
-                        <summary><a href="{{ link.url }}">{{ link.title }}</a> {% if link.links != blank %}<span>{% render 'icon-plus' %}</span>{% endif %}</summary>
+                        <summary>
+                          <a href="{{ link.url }}">{{ link.title }}</a> 
+                          {% if link.links != blank %}
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="6.11765" width="13" height="0.764706" fill="black"/>
+                              <rect x="6.11768" y="13" width="13" height="0.764706" transform="rotate(-90 6.11768 13)" fill="black"/>
+                            </svg>
+                          {% endif %}
+                        </summary>
                         {% if link.links != blank %}
                           <div class="mc-child-link">
                             <ul>
