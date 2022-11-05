@@ -94,9 +94,6 @@
         </div>
       </div>
       <div class="tab-details-wrapper">
-        <div class="tab-details active-tab-details" data-index="1">
-          {{ product.description }}
-        </div>
         <div class="tab-details" data-index="2">
            {% for block in section.blocks %}
               {%- case block.type -%}
@@ -119,6 +116,9 @@
               {% endif %}
             {% endfor %}
           </ul>
+        </div>
+        <div class="tab-details active-tab-details" data-index="1">
+          {{ product.description }}
         </div>
       </div>
     </div>
