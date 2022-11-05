@@ -34,9 +34,25 @@
   background: #000000;
   justify-content: start;
 }
+
+.menu-content-mobile{
+  display: none;
+}
+
+@media(max-width: 480px){
+  .menu-content{
+    display:  none;
+  }
+
+  .menu-content-mobile{
+    display: block;
+  }
+}
+
 .mh2-ct-logo img{
   margin-left: 40px;
 }
+
 .logo-left-x {
   grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr);
 }
