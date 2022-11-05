@@ -577,4 +577,9 @@ li.child-item-x {
     display: none;
   }
 
+  .mh2-search-icon svg{
+    height: 22px;
+    width: 22px;
+  }
+
 }
