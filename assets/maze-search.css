@@ -262,6 +262,7 @@ ul.msf-ul > li{
     overflow: hidden;
     box-sizing: border-box;
     padding: 0 10px;
+    display: none;
 }
 
 @media(max-width: 480px){
