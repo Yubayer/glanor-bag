@@ -62,13 +62,13 @@
                   <div class="mc-mobile-wrapper">
                     {% for link in section.settings.main-menu.links %}
                       <details>
-                        <summary>{{ link.title }}</summary>
+                        <summary><a href="{{ link.url }}">{{ link.title }}</a></summary>
                         {% if link.links != blank %}
                           <div>
                             <ul>
                               {% for child_link in link.links %}
                                 <li>
-                                  {{ child_link.title }}
+                                  <a href="{{ child_link.url }}">{{ child_link.title }}</a>
                                 </li>
                               {% endfor %}
                             </ul>
