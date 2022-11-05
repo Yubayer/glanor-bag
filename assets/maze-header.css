@@ -509,6 +509,7 @@ li.child-item-x {
 
   .mc-mobile-wrapper details[open] .mc-minus {
     display: block;
+    transform: translateY(-6px);
   }
 
   .mc-mobile-wrapper details[open] summary ~ * {
