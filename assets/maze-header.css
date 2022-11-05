@@ -46,6 +46,7 @@
 
   .menu-content-mobile{
     display: block;
+    height: 100vh;
   }
 }
 
