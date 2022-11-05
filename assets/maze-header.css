@@ -483,6 +483,7 @@ li.child-item-x {
     list-style-type: none;
     margin-top: 2px;
     margin-bottom: 2px;
+    padding-left: 2rem;
   }
 
   .mc-child-link ul li a{
