@@ -121,6 +121,16 @@
     closeIcon.style.display = 'none'
     document.querySelector(".menu-content-mobile").classList.remove('active-mobile-menu')
   })
+
+  window.addEventListener('resize', e=> {
+    if (screen.width <= 480) {
+      burgerIcon.style.display = 'block'
+      closeIcon.style.display = 'none'
+    } else {
+      burgerIcon.style.display = 'none'
+      closeIcon.style.display = 'none'
+    }
+  })
 </script>
 
 {% schema %}
