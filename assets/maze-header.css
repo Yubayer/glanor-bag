@@ -503,12 +503,21 @@ li.child-item-x {
     display: none;
   }
 
-  details[open] .mc-plus {
+  .mc-mobile-wrapper details[open] .mc-plus {
     display: none;
   }
 
-  details[open] .mc-minus {
+  .mc-mobile-wrapper details[open] .mc-minus {
     display: block;
+  }
+
+  .mc-mobile-wrapper details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
   }
 
 }
