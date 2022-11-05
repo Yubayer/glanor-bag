@@ -59,13 +59,14 @@
                     </div>
                 </div>
                 <div class="menu-content-mobile">
-                  <details>
-                      <summary>aaaaaaa</summary>
-                    </details>
                   {% for link in section.settings.main-menu.links %}
                     <details>
                       <summary>{{ link.title }}</summary>
-                      <p>rnational</p>
+                      <div>
+                        {% for child_link in link.links %}
+                          {{ child_link.title }}
+                        {% endfor %}
+                      </div>
                     </details>
                   {% endfor %}
                 </div>
