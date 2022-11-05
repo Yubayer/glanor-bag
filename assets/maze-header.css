@@ -458,4 +458,10 @@ li.child-item-x {
     display: block;
   }
 
+  .mc-mobile-wrapper {
+    box-sizing: border-box;
+    width: 89%;
+    margin: auto;
+  }
+
 }
