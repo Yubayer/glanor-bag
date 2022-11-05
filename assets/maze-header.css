@@ -450,6 +450,15 @@ li.child-item-x {
   top: 9px;
 }
 
+@media(min-width: 481px){
+  .header-close-icon{
+    display: none;
+  }
+  .header-burger-icon{
+    display: none;
+  }
+}
+
 @media(max-width: 480px) {
   .mh2-dp-search>input {
     display: none;
