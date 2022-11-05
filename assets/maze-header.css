@@ -381,6 +381,13 @@ li.child-item-x {
   align-self: center;
 }
 
+@media(max-width: 480px){
+  .mh2-ct-logo,
+  .mh2-ct-icon {
+    align-self: center;
+  }
+}
+
 .mh2-ct-search {
   display: flex;
   gap: 14px;
