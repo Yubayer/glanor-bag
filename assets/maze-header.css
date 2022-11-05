@@ -495,7 +495,7 @@ li.child-item-x {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    padding-right: 10%;
+    padding-right: 5%;
   }
 
 }
