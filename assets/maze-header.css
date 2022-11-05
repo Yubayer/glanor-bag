@@ -466,6 +466,12 @@ li.child-item-x {
 
   .mc-mobile-wrapper a{
     text-decoration: none;
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
   }
 
   .mc-mobile-wrapper details {
