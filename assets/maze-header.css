@@ -480,4 +480,8 @@ li.child-item-x {
     padding: 6px 0px;
   }
 
+  .mc-child-link ul{
+    list-style-type: none;
+  }
+
 }
