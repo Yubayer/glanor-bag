@@ -382,9 +382,12 @@ li.child-item-x {
 }
 
 @media(max-width: 480px){
-  .mh2-ct-logo,
-  .mh2-ct-icon {
-    align-self: center;
+  .mh2-ct-logo {
+    align-self: flex-start;
+  }
+  
+  .mh2-ct-search {
+    justify-self: end;
   }
 }
 
