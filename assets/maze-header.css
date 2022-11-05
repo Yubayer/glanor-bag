@@ -498,4 +498,13 @@ li.child-item-x {
     padding-right: 5%;
   }
 
+  .mc-plus{}
+  .mc-minus{
+    display: none;
+  }
+
+  details[open] .mc-plus {
+    display: none;
+  }
+
 }
