@@ -526,4 +526,8 @@ li.child-item-x {
     100%  {opacity: 1; margin-left: 0px}
   }
 
+  .header-close-icon{
+    display: none;
+  }
+
 }
