@@ -106,6 +106,12 @@
 
 {{ 'maze-header.js' | asset_url | script_tag }}
 
+<script>
+  document.querySelector(".header-burger-icon").addEventListener("click", e => {
+    document.querySelector(".menu-content-mobile").classList.add('.active-mobile-menu')
+  })
+</script>
+
 {% schema %}
   {
     "name": "Maze header",
