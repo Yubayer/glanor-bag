@@ -483,4 +483,8 @@ li.child-item-x {
     list-style-type: none;
   }
 
+  .mc-child-link ul li a{
+    line-height: 29px;
+  }
+
 }
