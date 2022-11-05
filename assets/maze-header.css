@@ -57,6 +57,7 @@
 @media(max-width: 480px){
   .mh2-ct-logo img{
     margin-left: 0px;
+    max-height: 22px;
   }
 }
 
