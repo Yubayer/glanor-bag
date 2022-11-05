@@ -475,7 +475,7 @@ li.child-item-x {
   }
 
   .mc-mobile-wrapper details {
-    border-bottom: 2px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
     box-sizing: border-box;
     padding: 10px 0px;
   }
