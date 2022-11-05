@@ -45,8 +45,8 @@
   }
 
   .menu-content-mobile{
-    display: block;
-    min-height: 100vh;
+/*     display: block;
+    min-height: 100vh; */
   }
 }
 
@@ -461,6 +461,7 @@ li.child-item-x {
 
   .active-mobile-menu{
     display: block;
+    min-height: 100vh;
   }
 
   .mc-mobile-wrapper {
