@@ -468,6 +468,7 @@ li.child-item-x {
     display: block;
     position: inherit;
     top: 0px;
+    right: 0px;
   }
 
   .active-mobile-menu{
