@@ -62,7 +62,7 @@
                   <div class="mc-mobile-wrapper">
                     {% for link in section.settings.main-menu.links %}
                       <details>
-                        <summary><a href="{{ link.url }}">{{ link.title }}</a> <span>+</span></summary>
+                        <summary><a href="{{ link.url }}">{{ link.title }}</a> {% if link.links != blank %}<span>+</span>{% endif %}</summary>
                         {% if link.links != blank %}
                           <div class="mc-child-link">
                             <ul>
