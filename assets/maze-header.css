@@ -464,4 +464,8 @@ li.child-item-x {
     margin: auto;
   }
 
+  .mc-mobile-wrapper a{
+    text-decoration: none;
+  }
+
 }
