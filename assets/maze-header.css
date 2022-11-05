@@ -55,7 +55,9 @@
 }
 
 @media(max-width: 480px){
-  margin-left: 0px;
+  .mh2-ct-logo img{
+    margin-left: 0px;
+  }
 }
 
 .logo-left-x {
