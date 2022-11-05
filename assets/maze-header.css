@@ -412,6 +412,13 @@ li.child-item-x {
 .mh2-user-icons svg{
   margin-left: 15px;
 }
+
+@media(max-width: 480px){
+  .mh2-user-icons{
+    align-items: inherit;
+  }
+}
+
 .mh2-dp-search>input {
   width: 100%;
 /*   font-family: Crimson Text, serif; */
