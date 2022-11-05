@@ -507,4 +507,8 @@ li.child-item-x {
     display: none;
   }
 
+  details[open] .mc-minus {
+    display: block;
+  }
+
 }
