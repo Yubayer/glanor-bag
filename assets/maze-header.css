@@ -402,7 +402,7 @@ li.child-item-x {
 .mh2-ct-search {
   display: flex;
   gap: 14px;
-  align-items: center;
+  align-items: start;
 }
 
 .mh2-ct-icon {
