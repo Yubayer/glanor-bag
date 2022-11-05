@@ -62,7 +62,7 @@
                   {% for link in section.settings.main-menu.links %}
                     <details>
                       <summary>{{ link.title }}</summary>
-                      {% if link.links %}
+                      {% if link.links != blank %}
                         <div>
                           <ul>
                             {% for child_link in link.links %}
