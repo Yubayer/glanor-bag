@@ -54,6 +54,10 @@
   margin-left: 40px;
 }
 
+@media(max-width: 480px){
+  margin-left: 0px;
+}
+
 .logo-left-x {
   grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr);
 }
