@@ -379,6 +379,7 @@ li.child-item-x {
 @media(max-width: 480px){
   .menu-content-top{
     grid-template-columns: 1fr 1fr;
+    padding: 17px 10px;
   }
 }
 
