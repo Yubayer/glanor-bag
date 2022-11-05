@@ -83,17 +83,20 @@
   <div class="page-width">
     <div class="pd-wrapper">
       <div class="tab-list-wrapper">
-        <div class="tab-list active-tab-list" data-index="1">
+        <div class="tab-list" data-index="1">
+          <p>Specs</p>
+        </div>
+        <div class="tab-list active-tab-list" data-index="3">
           <p>Details</p>
         </div>
         <div class="tab-list" data-index="2">
           <p>Reviews</p>
         </div>
-        <div class="tab-list" data-index="3">
-          <p>Specs</p>
-        </div>
       </div>
       <div class="tab-details-wrapper">
+        <div class="tab-details active-tab-details" data-index="1">
+          {{ product.description }}
+        </div>
         <div class="tab-details" data-index="2">
            {% for block in section.blocks %}
               {%- case block.type -%}
@@ -116,9 +119,6 @@
               {% endif %}
             {% endfor %}
           </ul>
-        </div>
-        <div class="tab-details active-tab-details" data-index="1">
-          {{ product.description }}
         </div>
       </div>
     </div>
