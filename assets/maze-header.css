@@ -369,6 +369,12 @@ li.child-item-x {
   padding: 25px 10px;
 }
 
+@media(max-width: 480px){
+  .menu-content-top{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .mh2-ct-search,
 .mh2-ct-logo,
 .mh2-ct-icon {
