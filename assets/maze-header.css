@@ -396,6 +396,7 @@ li.child-item-x {
   
   .mh2-ct-search {
     justify-self: end;
+    gap: 0px;
   }
 }
 
