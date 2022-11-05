@@ -481,6 +481,7 @@ li.child-item-x {
 
   .mc-child-link ul{
     list-style-type: none;
+    margin-top: 2px;
   }
 
   .mc-child-link ul li a{
