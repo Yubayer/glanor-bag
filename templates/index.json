@@ -80,7 +80,7 @@
       "settings": {
         "title": "Best Sellers",
         "m_top": 15,
-        "m_bottom": 15,
+        "m_bottom": 1,
         "heading_size": "h1",
         "description": "",
         "show_description": false,
