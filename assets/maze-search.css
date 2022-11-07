@@ -27,6 +27,19 @@
   text-decoration: none;
   color: #000;
 }
+.msd-result-item p:first-child{
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: .3px;
+  line-height: 18px;
+}
+.msd-result-item p:last-child{
+  font-size: 18px;
+  color: #000;
+  letter-spacing: .3px;
+  line-height: 18px;
+}
 .msd-mobile-input svg{
   display: none;
 }
