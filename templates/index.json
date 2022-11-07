@@ -79,7 +79,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
-        "m_top": 30,
+        "m_top": 15,
         "m_bottom": 15,
         "heading_size": "h1",
         "description": "",
