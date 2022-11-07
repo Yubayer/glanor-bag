@@ -19,6 +19,10 @@
   visibility: hidden;
   transition: visibility .5s ease-in-out;
 }
+.msd-result-item a{
+  text-decoration: none;
+  color: #000;
+}
 .msd-mobile-input svg{
   display: none;
 }
