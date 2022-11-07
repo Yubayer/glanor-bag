@@ -116,6 +116,11 @@ ul.msf-ul {
 }
 
 @media (max-width: 480px){
+  .msd-mobile-input {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .msd-mobile-input svg{
     display: block;
   }
