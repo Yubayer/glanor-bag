@@ -41,7 +41,7 @@
 .mh2-ct-search {
   display: flex;
   gap: 14px;
-  align-items: center !important;
+  align-items: center;
 }
 @media(max-width: 480px){
   .menu-content{
