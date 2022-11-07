@@ -79,6 +79,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
+        "m_top": 30,
+        "m_bottom": 15,
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -327,6 +329,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Arrivals",
+        "m_top": 1,
+        "m_bottom": 20,
         "heading_size": "h1",
         "description": "",
         "show_description": false,
