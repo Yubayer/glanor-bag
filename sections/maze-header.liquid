@@ -145,7 +145,13 @@
     }
   })
 </script>
-
+<script>
+const closeMblIcon = document.getElementById("close-mbl-search");
+const searchMbl = document.querySelector("dp-search-container");
+closeMblIcon.addEventListener("click",function(){
+  searchMbl.classList.remove("active-dp-search-container");
+})
+</script>
 {% schema %}
   {
     "name": "Maze header",
