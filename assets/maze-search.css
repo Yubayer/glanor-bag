@@ -19,7 +19,9 @@
   visibility: hidden;
   transition: visibility .5s ease-in-out;
 }
-
+.msd-mobile-input svg{
+  display: none;
+}
 .ms-open{
   visibility: visible;
   z-index: 5;
@@ -114,6 +116,9 @@ ul.msf-ul {
 }
 
 @media (max-width: 480px){
+  .msd-mobile-input svg{
+    display: block;
+  }
   ul.msf-ul {
     display: -webkit-inline-box;
     overflow-x: scroll;
