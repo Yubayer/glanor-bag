@@ -54,7 +54,9 @@
 {%- endstyle -%}
 <style>
 /*   Custom Slider Style */
-  
+  .grid__item{
+    flex-basis: 50%;
+  }
 </style>
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
