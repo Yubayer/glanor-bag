@@ -54,7 +54,7 @@
 {%- endstyle -%}
 <style>
 /*   Custom Slider Style */
-  .grid{
+  .grid-custom{
     flex-wrap: nowrap;
   }
   .grid__item{
@@ -93,7 +93,7 @@
       </div>
 
     <div class="swiper featured-collection-swipper-main">
-      <ul  class="swiper-wrapper view-in-tab grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}" role="list">
+      <ul  class="swiper-wrapper view-in-tab grid-custom grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}" role="list">
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li  class="grid__item swiper-slide">
             {% render 'card-product',
