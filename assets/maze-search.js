@@ -164,5 +164,4 @@ class MazeSearchDropdown extends HTMLElement{
 
 customElements.define("maze-search-dropdown", MazeSearchDropdown)
 
-const closeMblIcon = document.getElementById("close-mbl-search");
-console.log(closeMblIcon);
+
