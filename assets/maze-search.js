@@ -91,7 +91,6 @@ class MazeSearchDropdown extends HTMLElement{
     let result = ''
     data.forEach(product => {
       result+= `<div class="msd-result-item">
-      <a href='{{ product.url }}'>
         <div>
           <img src="${product.image ? product.image : product.featured_image}" alt="product-image" width="100%">
         </div>
@@ -99,7 +98,6 @@ class MazeSearchDropdown extends HTMLElement{
           <p>${product.title}</p>
           <p>${product.price}</p>
         </div>
-        </a>
       </div>`
     })
     this.resultWrapper.style.display = 'grid'
