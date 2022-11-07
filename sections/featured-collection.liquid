@@ -71,6 +71,9 @@
     margin-top: {{ section.settings.m_top }}px !important;
     margin-bottom: {{ section.settings.m_bottom }}px;
   }
+  .collection__title.title-wrapper {
+    margin-bottom: 1rem;
+  }
 </style>
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
