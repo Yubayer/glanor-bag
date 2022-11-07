@@ -67,6 +67,10 @@
     background: #000000;
     margin-left: 15px !important;
   }
+  .featured-collection-custom-title--{{ section.id }}{
+    margin-top: {{ section.settings.m_top }}px;
+    margin-bottom: {{ section.settings.m_bottom }}px;
+  }
 </style>
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
@@ -92,7 +96,7 @@
   <div class="collection-padding collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
       <div class="collection__title title-wrapper title-wrapper--no-top-margin {% comment %}page-width{% endcomment %}{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
-          <h2 class="featured-collection-custom-title featured-collection-border title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+          <h2 class="featured-collection-custom-title--{{ section.id }} featured-collection-border title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
         {%- endif -%}
         {%- if section.settings.description != blank or section.settings.show_description and section.settings.collection.description != empty -%}
           <div class="collection__description {{ section.settings.description_style }}">{%- if section.settings.show_description -%}{{ section.settings.collection.description }}{%- else -%}{{ section.settings.description }}{% endif %}</div>
@@ -173,6 +177,26 @@
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "range",
+      "id": "m_top",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "m_bottom",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 20
     },
     {
       "type": "select",
