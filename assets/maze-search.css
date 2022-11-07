@@ -245,7 +245,7 @@ ul.msf-ul > li{
 
 @media(max-width: 480px){
   :root{
-    --msd-bg: #a8fffb;
+    --msd-bg: #fff;
     --msd-height: 90vh;
     --mas-width: 100vw;
   }
