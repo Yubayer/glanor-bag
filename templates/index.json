@@ -329,8 +329,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Arrivals",
-        "m_top": 1,
-        "m_bottom": 20,
+        "m_top": 35,
+        "m_bottom": 15,
         "heading_size": "h1",
         "description": "",
         "show_description": false,
