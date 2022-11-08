@@ -7,17 +7,17 @@
           "type": "slider",
           "settings": {
             "show_text_content": false,
-            "title": "New & used saddless",
-            "title_transform": "uppercase",
+            "title": "The perfect bag for <br>the modern woman",
+            "title_transform": "capitalize",
             "text": "",
             "btn_text_1": "Show new",
             "btn_url_1": "",
-            "btn_color_1": "#ff662e",
-            "btn_color_1_hover": "#610909",
+            "btn_color_1": "#000000",
+            "btn_color_1_hover": "#a74b00",
             "btn_text_2": "",
             "btn_url_2": "",
             "btn_color_2": "#1e1717",
-            "btn_color_2_hover": "#ab3d3d",
+            "btn_color_2_hover": "#a74b00",
             "image_desktop": "shopify:\/\/shop_images\/Banner-1_91274b81-2e0b-4014-8cea-8e23f92881ea.png"
           }
         },
@@ -66,11 +66,11 @@
       "settings": {
         "full_width": true,
         "slider_mt": 0,
-        "slider_mb": 29,
-        "slider_height": 460,
-        "background": "",
-        "text_content_pt": 10,
-        "text_content_pb": 28,
+        "slider_mb": 30,
+        "slider_height": 600,
+        "background": "linear-gradient(57deg, rgba(0, 0, 0, 0.4) 8%, rgba(0, 0, 0, 0.4) 47%, rgba(0, 0, 0, 0.4) 100%)",
+        "text_content_pt": 30,
+        "text_content_pb": 30,
         "text_content_pl": 32,
         "text_content_pr": 32
       }
